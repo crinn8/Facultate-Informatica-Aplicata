@@ -1,0 +1,81 @@
+
+struct nod {
+	int info;
+	nod *leg;
+};
+
+struct lista {
+
+	nod *cap;
+	lista() {
+		cap = NULL;
+	}
+	void adaugare(int info) {
+		nod *x; x = new nod;
+		x->info = info;
+		x->leg = NULL;
+		if (cap != NULL)
+			x->leg = cap;
+		cap = x;
+
+	}
+	nod * cautare(int k) {
+		nod *x;
+		x = cap;
+		while (x != NULL && x->info != k)
+			x = x->leg;
+		return x;
+	}
+	void stergere(nod *x) {
+		if (x == cap)
+			cap = cap->leg;
+		else {
+			nod *aux;
+			aux = cap;
+			while (aux->leg != x)
+				aux = aux->leg;
+			aux->leg = x->leg;
+			delete x;
+		}
+	}
+	void afisare() {
+		if (cap == NULL)
+			cout << "\nLista este goala.\n";
+		else {
+			nod *x = cap;
+			cout << "\nLista este: ";
+			while (x != NULL)
+			{
+				cout << x->info << " -> ";
+				x = x->leg;
+			}
+			cout << "NULL\n";
+		}
+	};
+	int size() {
+		if (cap == NULL)
+			return 0;
+		else {
+			nod* aux = cap; int nr = 0;
+			while (aux != NULL) {
+				nr++;
+				aux = aux->leg;
+			}
+			return nr;
+		}
+	}
+	void inversare() {
+		if (cap == NULL)
+			cout << "\nLista este goala!\n";
+		else {
+			nod *curent=cap, *precedent=NULL, *urmator;
+			while (curent!=NULL) {
+				urmator = curent->leg;
+				curent->leg = precedent;
+				precedent = curent;
+				curent = urmator;
+			}
+			cap = precedent;
+		}
+	}
+};

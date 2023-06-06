@@ -1,0 +1,35 @@
+
+struct stack {
+	struct nod {
+		T info;
+		nod *leg;
+	};
+	nod *varf;
+	stack() {
+		varf = NULL;
+	}
+	void push(T c) {
+		nod *x; x = new nod;
+		x->info = c;
+		x->leg = NULL;
+		if (varf != NULL)
+			x->leg = varf;
+		varf = x;
+	};
+	void pop() {
+		nod *y; y = new nod;
+		y = varf;
+		varf = varf->leg;
+		delete y;
+	};
+	T top() {
+		if (varf != NULL)
+			return varf->info;
+	}
+	bool empty() {
+		if (varf == NULL)
+			return 1;
+		else
+			return 0;
+	}
+};
