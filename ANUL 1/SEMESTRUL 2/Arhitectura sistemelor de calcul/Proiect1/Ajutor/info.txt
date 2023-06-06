@@ -1,0 +1,14 @@
+Abacul a aparut in jurul anului 1200, in China. Numit “Suan-pan” acest calculator antic este încă folosit în China și în alte 
+țări asiatice. Este considerat esential in dezvoltarea inteligentei si dexteritatii copiilor.
+Pentru a intelege modul de utilizare al abacului va propun sa facem urmatoarele calcule: 1285+2054, 258741+3654
+
+Avea doua margele in partea 
+superioara si cinci in partea inferioara, de aici si denumirea de “abacul 2/5”. Metoda 2/5 a rezistat pana la mijlocul secolului 
+al XIX-lea, cand este schimbata cu tipul 1/5. Stilul folosit in Japonia, chiar si in ziua de astazi, este cel de tip 1/4 si a
+ aparut in jurul anului 1930. Modelele de tip 1/5 sunt extrem de rare in prezent, iar cele de tip 2/5 sunt utilizate doar in 
+comunitatile de chinezi din America de Nord.
+
+Abacul este un calculator antic încă folosit în China și în alte asiatice
+țări. În chineză se numește „Suanpan”. Este un cadru împărțit în
+o secțiune superioară și inferioară de o bară numită „grindă”. Abacul poate
+să fie folosit pentru adunare, scădere, multiplicare și divizare.

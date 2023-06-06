@@ -1,0 +1,62 @@
+
+When Qn=0 and Qn+1=0 in the characteristic table in the first 2 rows we have them both 0 . The value for J is always 0
+so I can write J as 0 but the values of K are 0 1 so it is down here because the value is only dependent upon J whatevere be the value of K 
+it is not going to change so K is the dont't care. 
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+n D flip-flop you already know that there is a single input that is d we call it the data input and has two possible combinations 
+but in SR flip-flop I have made the truth table for SR flip-flop because we will use it for your JK flip-flop and in this ypo can see 
+there are two inputs has four possible combinations when your clock is high so ot is always good to have four combinations compared
+to two combinations but there is one disadvantage in this the last combination when s is 1 and r is 1 is a not used state so we don't
+use it ok there is a contradiction that you have already seen in the sr flip-flop so in this whole presentation what we will try to do
+we will try to make a a flip-flop in which this one state is used there is some usable form when wea are having s as 1 and r as one and
+the flip-flop obtained is called as the jk flip-flop so I hope it is now clear that why we have to study the kj flip-flop now let us 
+move to this circuit for the jk flip-flop this is the circuit for sr flip-flop and we will try tomake a jk only from this circuit.
+Let's see what changes we have to do to get a jk flip-flop. There are 2 outputs to this, Q and Q complement. I will take Q from here and
+I will give this Q as one of the input to our NAND gate the NAND gate in which r is one of the input, similarly I will take Q 
+complement out and give it to the NAND gate in which s is acting as one of the input. So this is our jk flip-flop now I will write
+s as j and r as k. The next thing is the working of this flip-flop so the first case is when clock is lolw and you already know in
+this .. (explicatie tabel).
+
+So I can write it like Q is 0 1 0 1 and so on Q complement is 1 0 1 0 so on it is racing and a very important because wea are going 
+to use it directly in our counters. We can see that when Q was 0 it will become 1  and when it is 1 it will become 0 so
+if I say Q n +1 that is the output if it is 0 it will become now 1 and again 0 and so on. So it is acvtually the complement of the previous 
+state so whatever b e the value for the Qn we are having output as Q' so this not used state is now Q' .
+Everything is same like sr flip-flop but only the last combination in which we are having output as Q' that is our toggle.
+
+
+By toggle I mean that the output Qn+1 quickly changes from 0to 1 and again 0 then 1 this is called as toggling.
+Now by using this truth table I have to find out the characteristic and the excitation table for the jk flip-flop.
+In this characteristic table I am having single output that is my next state so what is the next state Qn+1 is the next state.
+This is stored in the flip flop and this next state is dependent upon the present input. My present input is J and K and it is also
+dependent on the previous state which is Qn. So it is clear that I am having three inputs, which are Qn J K and depending upon
+this three inputs I'm having a single output that is On+1(the next state).
+
+ Because of this three variables O'm having 8 combinations.
+Now let;s use this truth table to find out the values of Qn+1 for different values of Qn K and K. 
+So when J k both are 0 it is he Qn so whatever the previous value we are having the Qn+1 it's going to be the same. Qn is 0 so 
+Qn+1is also 0.
+
+
+
+After the characteristic table we are going to have the excitation table  and this table is deduced by the help of characteristic table 
+In this table we arfe having the 2 input Qn and Qn+1 which represent the state and the next state and 2 output which are the
+inputs to the flip flop j and k. We are having 4 possible combinations for the inputs.
+
+
+
+
+
+
+
+
+
+

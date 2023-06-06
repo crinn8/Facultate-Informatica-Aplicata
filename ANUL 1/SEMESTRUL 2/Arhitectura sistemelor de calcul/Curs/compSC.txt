@@ -1,0 +1,5 @@
+UCP-unitate centrala de prelucrare
+IOS-input output system
+UCC=Unitate de comanda de control
+UAL=unitatea aritmetico-logica
+UCtrlP=unitate de control si prelucrare

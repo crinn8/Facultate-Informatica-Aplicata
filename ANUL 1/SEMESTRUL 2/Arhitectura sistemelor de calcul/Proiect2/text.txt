@@ -1,0 +1,28 @@
+()
+In continuare vom studia bistabilul de tip JK, acesta are două intrări de date, J şi K, intrarea de tact, C şi ieşirile identice 
+cu tipul SR. 
+Bistabilul JK a fost creat din dorinta de a elimina nedeterminarea produsa la bistabilul SR de combinatia S = R = 1. În cazul 
+bistabilului JK, combinatia J = K = 1 conduce la complementarea iesirii dupa prima tranzitie activa a semnalului de tact. ()
+Vom analiza o tipologie pentru bistabilul de tip JK derivata din bistabilul de tip SR si obtinuta prin adaugarea unei
+bucle de reactie de la iesiri la intrari, dar restrictionata temporal pentru o functionare corecta (durata impulsului de tact 
+trebuie sa fie mai mica decat timpul de propagare prin bistabil). 
+Pentru acesta, vom folosi un bistabil de tip SR asupra caruia vom efectua anumite modificari. Vom introduce iesirea Q
+drept intrare in poarta NAND in care R este una dintre intrari si iesirea Q' drept intrare in poarta NAND in care S este una dintre 
+intrari. () Astfel se face trecerea de la bistabilul de tip SR la cel de tip JK. ()
+In tabela de adevar remarcam faptul ca pentru valoarea 0 pe intrarea de tact dar si pentru cazul in care J si K sunt ambele 0, On+1 
+primeste starea precedenta, iar pentru cazul in care toate cele trei intrari sunt 1, On+1 devine complementul starii precedente.
+Diferenta fata de bistabilul de tip SR este data de ultima combinatie, care reprezinta comutarea. 
+ () Acum, folosind tabela de adevar vom determina tabela caracteristica si excitation table pentru bistabilul de tip JK. In aceasta
+tabela avem o singura iesire, reprezentata de starea urmatoare On+1 si trei intrari: Qn, J si K. Datorita celor 3 variabile vom
+avea 8 combinatii posibile. Observam ca atunci cand J si K sunt ambele 0 On+1 preia valoarea lui On deci devine 0. In mod asemanator 
+completam si restul tabelei.
+Utilizand tabela caracteristica vom deduce excitation table.  () In aceasta vom avea 2 intrari: Qn si Qn+1 si 2 iesiri J si K. Astfel, avem 4 combinatii posibile pentru 
+intrari. 
+Cand Qn si Qn+1 sunt ambele 0, in tabela caracteristica J este mereu 0 deci isi pastreaza valoarea, iar K are valorile 0 si 1, deci
+in excitation table vom nota cu x. In mod similar completam intreaga tabela, iar apoi, folosind diagramele Karnaugh vom incerca sa deducem 
+expresia logica pentru Qn+1. Pentru inceput vom alcatui diagrame pentru J si K si le vom determina in functie de On si On+1. 
+Astfel, se observa ca J este reprezentat de Qn+1, iar K de complementul lui Qn+1.
+In acelasi mod, vom deduce expresia logica pentru On+1, folosind tabela caracteristica. Alcatuim diagrama Karnaugh corespunzatoare,
+formam grupuri de valori de 1 din diagrama, iar apoi aflam relatia asociata lui On+1. Astfel, starea Qn+1 este determinata de 
+expresia logica Qn negat ori J plus Qn ori K negat. 
+

@@ -1,0 +1,5 @@
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Arhitectura sistemelor de calcul\Proiect1\Incercare1\Incercare1\obj\Debug\Incercare1.csprojAssemblyReference.cache
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Arhitectura sistemelor de calcul\Proiect1\Incercare1\Incercare1\obj\Debug\GlobalMembers.resources
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Arhitectura sistemelor de calcul\Proiect1\Incercare1\Incercare1\obj\Debug\Incercare1.Properties.Resources.resources
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Arhitectura sistemelor de calcul\Proiect1\Incercare1\Incercare1\obj\Debug\Incercare1.csproj.GenerateResource.cache
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Arhitectura sistemelor de calcul\Proiect1\Incercare1\Incercare1\obj\Debug\Incercare1.csproj.CoreCompileInputs.cache
