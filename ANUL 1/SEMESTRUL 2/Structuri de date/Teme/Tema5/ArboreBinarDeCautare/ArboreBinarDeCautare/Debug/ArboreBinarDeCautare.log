@@ -1,0 +1,4 @@
+﻿  ArboreBinarDeCautare.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\ArboreBinarDeCautare\ArboreBinarDeCautare\ArboreBinarDeCautare.cpp(31,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\ArboreBinarDeCautare\ArboreBinarDeCautare\ArboreBinarDeCautare.cpp(233,14): warning C4101: 'color': unreferenced local variable
+  ArboreBinarDeCautare.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\ArboreBinarDeCautare\Debug\ArboreBinarDeCautare.exe

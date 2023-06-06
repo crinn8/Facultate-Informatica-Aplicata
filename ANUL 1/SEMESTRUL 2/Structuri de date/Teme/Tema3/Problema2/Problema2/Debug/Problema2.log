@@ -1,0 +1,11 @@
+﻿  Problema2.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Problema2\Problema2.cpp(28,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Problema2\Problema2.cpp(31,53): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Problema2\Problema2.cpp(54,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Problema2\Problema2.cpp(63,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Problema2\Problema2.cpp(80,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Problema2\Problema2.cpp(108,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Problema2\Problema2.cpp(111,33): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Problema2\Problema2.cpp(162,12): warning C4101: 'y': unreferenced local variable
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Problema2\Problema2.cpp(162,9): warning C4101: 'x': unreferenced local variable
+  Problema2.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema2\Debug\Problema2.exe

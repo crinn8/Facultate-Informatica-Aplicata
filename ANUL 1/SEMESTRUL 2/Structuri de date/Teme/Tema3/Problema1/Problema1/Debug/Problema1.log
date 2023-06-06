@@ -1,0 +1,16 @@
+﻿  Problema1.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(27,30): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(30,53): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(44,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(46,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(87,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(119,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(149,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(153,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(155,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(159,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(175,18): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(183,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(202,31): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Problema1\Problema1.cpp(217,9): warning C4101: 'nr_noduri': unreferenced local variable
+  Problema1.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema3\Problema1\Debug\Problema1.exe

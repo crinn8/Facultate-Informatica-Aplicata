@@ -1,0 +1,96 @@
+#include <iostream>
+#include <vector>
+
+class NOD 
+{
+public:
+    int nr_noduri;
+    std::vector<int>keys;
+    std::vector<NOD*>c;
+    bool leaf; 
+    
+    bool operator == (const NOD& aux) {
+        if (nr_noduri != aux.nr_noduri)
+            return 0;
+        for (int i = 0; i < aux.keys.size(); i++)
+            if (keys[i] != aux.keys[i])
+                return 0;
+        return 1;
+    }
+    bool operator > (const NOD& aux) {
+        return (keys[0] > aux.keys[0]);
+    }
+};
+
+class BArbore
+{
+private:
+    NOD* radacina;
+    int t = 2;
+public:
+    void CreareArboreVid()
+    {
+        NOD* x;
+        x = new NOD;
+        x->leaf = true;
+        x->nr_noduri = 0;
+        radacina = x;
+    }
+
+    void InsertRec(NOD* x, int key)
+    {
+
+    }
+
+    void TreeInsert(int key)
+    {
+        if (radacina->nr_noduri == 2 * t - 1)
+        {
+            NOD* nou;
+            nou = new NOD;
+            nou->leaf = false;
+            nou->nr_noduri = 0;
+            nou->c[0] = radacina;
+            radacina = nou;
+            Split(radacina, 1);
+        }
+        InsertRec(radacina, key);
+    }
+
+    void Split(NOD* x, int i)
+    {
+        NOD* y;
+        y = x->c[i];
+        x->nr_noduri++;
+        for (int k = x->nr_noduri; k >= i + 1; k--)
+        {
+            x->keys[k] = x->keys[k - 1];
+        }
+        x->keys[i] = y->keys[t];
+        for (int k = x->nr_noduri; k >= i + 1; k--)
+        {
+            x->c[k + 1] = x->c[k];
+        }
+        NOD* z;
+        z = new NOD;
+        z->nr_noduri = t - 1;
+        for (int k = 1; k <= t - 1; k++)
+        {
+            z->keys[k] = y->keys[k + t];
+        }
+        if (y->leaf == false)
+        {
+            for (int k = 1; k <= t; k++)
+            {
+                z->c[k] = y->c[k + t];
+            }
+        }
+        z->leaf = y->leaf;
+        x->c[i + 1] = z;
+    }
+};
+
+int main()
+{
+    return 0;
+}

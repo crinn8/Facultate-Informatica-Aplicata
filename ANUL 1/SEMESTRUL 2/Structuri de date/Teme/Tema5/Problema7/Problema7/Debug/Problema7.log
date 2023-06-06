@@ -1,0 +1,6 @@
+﻿  Problema7.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\Problema7\Problema7\Problema7.cpp(9,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\Problema7\Problema7\Problema7.cpp(23,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\Problema7\Problema7\Problema7.cpp(26,56): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\Problema7\Problema7\Problema7.cpp(32,12): warning C4018: '<': signed/unsigned mismatch
+  Problema7.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\Problema7\Debug\Problema7.exe

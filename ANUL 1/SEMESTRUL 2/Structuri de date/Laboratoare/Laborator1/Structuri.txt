@@ -1,0 +1,25 @@
+#include <iostream>
+
+struct student{
+    std::string nume;
+    std::string prenume;
+    int cnp;
+    int varsta;
+    int nota1,nota2;
+
+    void citire()
+    {
+        std::cout << "nume=";
+        std::cin >> nume;
+    }
+};
+
+int main()
+{
+    student persoane[10];
+    for (int index = 0; index < 10; index++)
+    {
+        persoane[index].citire();
+    }
+    return 0;
+}

@@ -1,0 +1,11 @@
+std::size_t std::hash<SolverState>::operator()(const SolverState& state) const noexcept
+{
+std::size_t seed = state.getState().size();
+
+for(auto& i : state.getState())
+{
+seed ^= i + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+}
+
+return seed;
+}

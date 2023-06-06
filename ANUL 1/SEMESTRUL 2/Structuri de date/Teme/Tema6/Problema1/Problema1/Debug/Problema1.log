@@ -1,0 +1,35 @@
+﻿  Problema1.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(114,12): warning C4101: 'm': unreferenced local variable
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(141,12): warning C4101: 'm': unreferenced local variable
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(59,2): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(56): message : while compiling class template member function 'void HashTable<int,std::string>::INSERT_S(std::pair<Key,std::string>)'
+          with
+          [
+              Key=int
+          ]
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(154): message : see reference to function template instantiation 'void HashTable<int,std::string>::INSERT_S(std::pair<Key,std::string>)' being compiled
+          with
+          [
+              Key=int
+          ]
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(140): message : see reference to class template instantiation 'HashTable<int,std::string>' being compiled
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(99,1): error C2440: 'initializing': cannot convert from 'std::list<std::pair<Key,Value>,std::allocator<std::pair<Key,Value>>>' to 'std::pair<Key,Value>'
+          with
+          [
+              Key=int,
+              Value=int
+          ]
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(99,10): message : No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(98): message : while compiling class template member function 'std::pair<Key,Value> HashTable<Key,Value>::operator [](int)'
+          with
+          [
+              Key=int,
+              Value=int
+          ]
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(130): message : see reference to function template instantiation 'std::pair<Key,Value> HashTable<Key,Value>::operator [](int)' being compiled
+          with
+          [
+              Key=int,
+              Value=int
+          ]
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema6\Problema1\Problema1\Problema1.cpp(113): message : see reference to class template instantiation 'HashTable<int,int>' being compiled

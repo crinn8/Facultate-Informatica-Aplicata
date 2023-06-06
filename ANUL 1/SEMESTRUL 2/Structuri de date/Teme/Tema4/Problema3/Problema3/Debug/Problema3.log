@@ -1,0 +1,4 @@
+﻿  Problema3.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema4\Problema3\Problema3\Problema3.cpp(103,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema4\Problema3\Problema3\Problema3.cpp(52): warning C4715: 'Priority_Queue::MAX_ELEMENT': not all control paths return a value
+  Problema3.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema4\Problema3\Debug\Problema3.exe

@@ -1,0 +1,14 @@
+﻿  ARN.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\ARN\ARN\ARN.cpp(39,2): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\ARN\ARN\ARN.cpp(38): message : while compiling class template member function 'void ARN<int>::CONSTRUCT(std::vector<T,std::allocator<T>>)'
+          with
+          [
+              T=int
+          ]
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\ARN\ARN\ARN.cpp(637): message : see reference to function template instantiation 'void ARN<int>::CONSTRUCT(std::vector<T,std::allocator<T>>)' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\ARN\ARN\ARN.cpp(628): message : see reference to class template instantiation 'ARN<int>' being compiled
+  ARN.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\ARN\Debug\ARN.exe

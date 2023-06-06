@@ -1,0 +1,4 @@
+﻿  Problema5.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\Problema5\Problema5\Problema5.cpp(62,27): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\Problema5\Problema5\Problema5.cpp(584,18): warning C4101: 'y': unreferenced local variable
+  Problema5.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema5\Problema5\Debug\Problema5.exe

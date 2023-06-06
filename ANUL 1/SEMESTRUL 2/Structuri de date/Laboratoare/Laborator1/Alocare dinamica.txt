@@ -1,0 +1,38 @@
+#include <iostream>
+
+int main()
+{
+    int *v, n;
+    v = new int[n];
+    delete[]v;
+    //v = (int*)malloc(n * sizeof(int));
+    int** matrice,m;
+    //alocare linii separat
+    matrice = new int* [m];
+    for (int index = 0; index < m; ++index)
+    {
+        matrice[index] = new int[n];
+    }
+    for (int index = 0; index < m; ++index)
+    {
+        delete[]matrice[index];
+    }
+    delete[]matrice;
+
+    //alocare bloc mare
+    matrice = new int* [m];
+    matrice[0]=new int[m * n];
+    for (int index = 1; index < m; ++index)
+    {
+        matrice[index] = matrice[index - 1] + n;
+    }
+    delete[]matrice[0];
+    delete[]matrice;
+
+
+    /*matrice = (int**)malloc(m * sizeof(int*));
+    for (int index = 0; index < m; ++index)
+    {
+        matrice[index] = (int*)malloc(n * sizeof(int));
+    }*/
+}
