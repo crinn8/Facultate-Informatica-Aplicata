@@ -1,0 +1,6 @@
+﻿  Lambda.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator7\Lambda\Lambda\Lambda.cpp(93,20): error C2059: syntax error: '='
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator7\Lambda\Lambda\Lambda.cpp(93,26): error C2143: syntax error: missing ';' before '{'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator7\Lambda\Lambda\Lambda.cpp(96,8): error C3536: 'lambda': cannot be used before it is initialized
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator7\Lambda\Lambda\Lambda.cpp(96,2): error C2064: term does not evaluate to a function taking 0 arguments
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator7\Lambda\Lambda\Lambda.cpp(97,2): error C2064: term does not evaluate to a function taking 0 arguments

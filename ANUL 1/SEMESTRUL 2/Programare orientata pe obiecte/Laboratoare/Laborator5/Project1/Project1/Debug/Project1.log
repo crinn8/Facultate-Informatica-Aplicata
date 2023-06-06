@@ -1,0 +1,10 @@
+﻿  Source.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator5\Project1\Project1\StudentSalariat.h(8): error C2548: 'StudentSalariat::StudentSalariat': missing default argument for parameter 3
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator5\Project1\Project1\StudentSalariat.h(11,1): error C2250: 'StudentSalariat': ambiguous inheritance of 'void Persoana::AfisareVirtuala(void)'
+  StudentSalariat.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator5\Project1\Project1\StudentSalariat.h(8): error C2548: 'StudentSalariat::StudentSalariat': missing default argument for parameter 3
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator5\Project1\Project1\StudentSalariat.h(11,1): error C2250: 'StudentSalariat': ambiguous inheritance of 'void Persoana::AfisareVirtuala(void)'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator5\Project1\Project1\StudentSalariat.cpp(4,63): error C2248: 'Student::facultate': cannot access private member declared in class 'Student'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator5\Project1\Project1\Student.h(6): message : see declaration of 'Student::facultate'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator5\Project1\Project1\Student.h(4): message : see declaration of 'Student'
+  Generating Code...

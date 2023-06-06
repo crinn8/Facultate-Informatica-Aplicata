@@ -1,0 +1,17 @@
+Conceptul C ++ al unei funcții lambda își are originea în calculul lambda și în programarea funcțională. O lambda este o funcție
+nenumită care este utilă (în programarea efectivă, nu în teorie) pentru fragmente scurte de cod care sunt imposibil de reutilizat
+și nu merită numite.
+
+În C ++, o funcție lambda este definită astfel
+
+[]() { } // barebone lambda 
+sau în toată gloria sa
+
+[]() mutable -> T { } // T is the return type, still lacking throw() 
+[] este lista de capturi, () lista argumentelor și {} corpul funcției.
+
+Syntax used for capturing variables :
+      [&] : capture all external variable by reference
+      [=] : capture all external variable by value
+      [a, &b] : capture a by value and b by reference
+

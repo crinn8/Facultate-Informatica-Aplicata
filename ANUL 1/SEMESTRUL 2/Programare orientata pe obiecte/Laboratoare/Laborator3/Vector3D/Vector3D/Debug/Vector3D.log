@@ -1,0 +1,3 @@
+﻿  Vector3D.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator3\Vector3D\Vector3D\Vector3D.cpp(36,11): warning C4804: '<': unsafe use of type 'bool' in operation
+  Vector3D.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator3\Vector3D\Debug\Vector3D.exe

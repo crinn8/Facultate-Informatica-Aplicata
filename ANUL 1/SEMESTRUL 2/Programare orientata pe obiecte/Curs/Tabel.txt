@@ -1,0 +1,125 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <fstream>
+#include <iomanip>
+using namespace std;
+
+const int MAX = 100;
+struct Student
+{
+	char nume[MAX];
+	int nota1, nota2;
+	double media;
+	void citire(ifstream& readFile)
+	{
+		readFile >> nume >> nota1 >> nota2;
+		media = (nota1 + nota2) / 2.00;
+	}
+};
+
+bool criteria(Student s1, Student s2)
+{
+	return s1.media > s2.media;
+}
+
+void citire_vector(vector<Student>& vector_student)
+{
+	ifstream readFile("studenti.txt");
+	int numar_studenti;
+	readFile >> numar_studenti;
+	for (int index = 0; index < numar_studenti; index++)
+	{
+		Student persoana;
+		persoana.citire(readFile);
+		vector_student.push_back(persoana);
+
+	}
+}
+
+double calculmedie1(vector<Student> vector_student)
+{
+	double media = 0;
+	for (int index = 0; index < vector_student.size(); index++)
+		media += vector_student[index].nota1;
+	return media / vector_student.size();
+}
+
+double calculmedie2(vector<Student> vector_student)
+{
+	double media = 0;
+	for (int index = 0; index < vector_student.size(); index++)
+		media += vector_student[index].nota2;
+	return media / vector_student.size();
+}
+
+double calculmedie(vector<Student> vector_student)
+{
+	double media = 0;
+	for (int index = 0; index < vector_student.size(); index++)
+		media += vector_student[index].media;
+	return media / vector_student.size();
+}
+
+void afisare(vector<Student> vector_student)
+{
+	cout << "--------------------------------------------------------------------------" << endl;
+	cout << setiosflags(ios::right) << "NRCT|";
+	cout << resetiosflags(ios::right);
+	cout << setiosflags(ios::left) << "NUME";
+	cout << "                                              |";
+	cout << resetiosflags(ios::left);
+	cout << setiosflags(ios::right) << "NOTA1";
+	cout << "|";
+	cout << resetiosflags(ios::right);
+	cout << setiosflags(ios::right) << "NOTA2";
+	cout << "|";
+	cout << resetiosflags(ios::right);
+	cout << setiosflags(ios::right) << "MEDIA";
+	cout << "|";
+	cout << resetiosflags(ios::right);
+	cout << endl;
+
+	for (int index = 0; index < vector_student.size(); index++)
+	{
+		cout << "----+--------------------------------------------------+-----+-----+------" << endl;
+		cout << setw(4) << setiosflags(ios::right) << index + 1;
+		cout << "|";
+		cout << resetiosflags(ios::right);
+		cout << setw(50) << setiosflags(ios::left) << vector_student[index].nume;
+		cout << "|";
+		cout << resetiosflags(ios::left);
+		cout << setw(5) << setiosflags(ios::right) << vector_student[index].nota1;
+		cout << "|";
+		cout << resetiosflags(ios::right);
+		cout << setw(5) << setiosflags(ios::right) << vector_student[index].nota2;
+		cout << "|";
+		cout << resetiosflags(ios::right);
+		cout << setw(5) << setiosflags(ios::right) << fixed << setprecision(2) << vector_student[index].media;
+		cout << "|";
+		cout << resetiosflags(ios::right);
+		cout << endl;
+
+	}
+	cout << "----+--------------------------------------------------+-----+-----+------" << endl;
+	cout << setiosflags(ios::left) << "Media generala";
+	cout << "                                         |";
+	cout << setw(5) << setiosflags(ios::right) << fixed << setprecision(2) << calculmedie1(vector_student);
+	cout << "|";
+	cout << setw(5) << setiosflags(ios::right) << fixed << setprecision(2) << calculmedie2(vector_student);
+	cout << "|";
+	cout << setw(5) << setiosflags(ios::right) << fixed << setprecision(2) << calculmedie(vector_student);
+	cout << "|";
+	cout << endl;
+	cout << "--------------------------------------------------------------------------" << endl;
+}
+
+int main()
+{
+
+	vector<Student> vector_student;
+	citire_vector(vector_student);
+	sort(vector_student.begin(), vector_student.end(), criteria);
+	afisare(vector_student);
+	return 0;
+}

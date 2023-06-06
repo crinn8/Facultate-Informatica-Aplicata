@@ -1,0 +1,22 @@
+﻿  Source.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\Elipsa.h(17,15): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\Elipsa.h(21,20): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\Poligon.h(10,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\Poligon.h(19,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\Poligon.h(32,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\Patrulater.h(11,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\Paralelogram.h(25,29): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(7,28): warning C4584: 'TRIUNGHIDRIS': base-class 'FIGURA' is already a base-class of 'TRIUNGHIISOSCEL'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\Figura.h(6): message : see declaration of 'FIGURA'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriunghiIsoscel.h(4): message : see declaration of 'TRIUNGHIISOSCEL'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(12,1): error C2385: ambiguous access of 'nume'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(12,1): message : could be the 'nume' in base 'FIGURA'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(12,1): message : or could be the 'nume' in base 'FIGURA'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(12,1): message : or could be the 'nume' in base 'FIGURA'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(15,1): error C2385: ambiguous access of 'puncte'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(15,1): message : could be the 'puncte' in base 'FIGURA'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(15,1): message : or could be the 'puncte' in base 'FIGURA'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(15,1): message : or could be the 'puncte' in base 'FIGURA'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(17,1): error C2385: ambiguous access of 'inaltime'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(17,1): message : could be the 'inaltime' in base 'TRIUNGHI'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Tema\Figura\Figura\TriungiDrIs.h(17,1): message : or could be the 'inaltime' in base 'TRIUNGHI'

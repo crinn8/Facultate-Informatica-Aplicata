@@ -1,0 +1,134 @@
+
+
+
+#include <iostream>
+using namespace std;
+
+
+class Examen{
+    int num;
+public:
+    Examen(int x)
+    {
+        num = x;
+    }
+    int ExFunction();
+};
+
+int Examen::ExFunction()
+{
+    int sum = 0;
+    int dec;
+    while (num)
+    {
+        num = num / 10;
+        dec = num % 10;
+        sum = sum * 10 + dec;
+    }
+    return sum;
+}
+
+int main()
+{
+    Examen objEx(12345);
+    cout<<objEx.ExFunction();
+    return 0;
+}
+
+
+
+#include <iostream>
+using namespace std;
+int FactFinder(int x = 5);
+
+int main()
+{
+    int x = 0;
+    for (int i = 0; i <= x; i++)
+        cout << FactFinder() << endl;
+    return 0;
+}
+int FactFinder(int x)
+{
+    if (x < 2)
+        return 1;
+    int fact = 1;
+    for (int i = 1; i <= x; i++)
+        fact = fact * i;
+    return fact;
+}
+
+
+#include <iostream>
+using namespace std;
+
+
+class ExamenSample {
+public:
+    int a;
+    float b;
+    void ExFunction(int a, float b, float c = 100.0f)
+    {
+        cout << a % 2 + c * b--;
+    }
+};
+int main()
+{
+    ExamenSample objEx;
+    objEx.ExFunction(20, 2, 5);
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+double ExFunction(double, double, double = 0, double = 0, double = 0);
+
+int main()
+{
+    double d = 2.3;
+    cout << ExFunction(d, 7) << " ";
+    cout << ExFunction(d, 7, 6) << endl;
+    return 0;
+}
+double ExFunction(double x, double p, double q, double r, double s)
+{
+    return p + (q + (r + s * x) * x) * x;
+}
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int m=5, n=6;
+    int& x = m;
+    int& y = n;
+    m = x++;
+    x = m++;
+    n = y++;
+    y = n++;
+    cout << m << " " << n;
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+struct Ex
+{
+    int x;
+    float y;
+    void Function(void)
+    {
+        y = x = 4 * 4;
+        x = y * y--;
+    }
+};
+
+int main()
+{
+    return 0;
+}

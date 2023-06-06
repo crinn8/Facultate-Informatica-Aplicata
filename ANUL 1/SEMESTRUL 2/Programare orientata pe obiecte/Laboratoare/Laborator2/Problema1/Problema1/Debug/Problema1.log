@@ -1,0 +1,4 @@
+﻿  Problema1.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator2\Problema1\Problema1\Problema1.cpp(26,26): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator2\Problema1\Problema1\Problema1.cpp(33,26): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
+  Problema1.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator2\Problema1\Debug\Problema1.exe

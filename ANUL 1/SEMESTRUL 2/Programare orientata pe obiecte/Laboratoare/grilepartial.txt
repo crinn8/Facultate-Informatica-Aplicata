@@ -1,0 +1,340 @@
+#include <iostream>
+using namespace std;
+
+class Examen
+{
+    static int x;
+public:
+    static void SetData(int xx)
+    {
+        x = xx++;
+    }
+    static void Display()
+    {
+        cout << x;
+    }
+};
+int Examen::x = 0;
+
+
+int main()
+{
+    Examen::SetData(44);
+    Examen::Display();
+    return 0;
+}
+
+
+#include <iostream>
+using namespace std;
+
+class Point 
+{
+    int x, y;
+public:
+    Point(int xx = 10, int yy = 20)
+    {
+        x = xx;
+        y = yy;
+    }
+    Point operator+(Point objPoint)
+    {
+        Point objTmp;
+        objTmp.x = objPoint.x + this->x;
+        objTmp.y = objPoint.y + this->y;
+        return objTmp;
+    }
+    void Display(void)
+    {
+        cout << x << " " << y;
+    }
+};
+
+
+int main()
+{
+    Point objP1;
+    Point objP2(1, 2);
+    Point objP3 = objP1 + objP2;
+    objP3.Display();
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+class ExBase
+{
+public:
+    ExBase()
+    {
+        cout<< "Base OK.";
+    }
+    virtual ~ExBase()
+    {
+        cout << "Base DEL.";
+    }
+};
+
+class ExD : public ExBase
+{
+public:
+    ExD()
+    {
+        cout << "Derived OK.";
+    }
+    ~ExD()
+    {
+        cout << "Derived DEL.";
+    }
+};
+
+
+int main()
+{
+    ExBase* basePtr = new ExD();
+    delete basePtr;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+
+class Base
+{
+    int x, y, z;
+public:
+    Base()
+    {
+        x = y = x = 0;
+   }
+    Base(int xx, int yy = 65, int zz = 66)
+    {
+        x = xx;
+        y = x + yy;
+        z = x + y;
+    }
+    void Display(void)
+    {
+        cout << x << " " << y << " " << z << endl;
+    }
+};
+
+class D : public Base
+{
+    int x, y;
+public:
+    D(int xx = 65, int yy = 66) : Base(xx, yy)
+    {
+        y = xx;
+        x = yy;
+    }
+    void Display(void)
+    {
+        cout << x << " " << y << " " << " ";
+    }
+};
+
+
+int main()
+{
+    D objD;
+    objD.Display();
+    return 0;
+}
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class A
+{
+public:
+    A(int n = 0) : m_n(n) {}
+public:
+    virtual int f() {
+        return m_n;
+    }
+    virtual ~A() {}
+protected :
+    int m_n;
+
+};
+
+class B : public A
+{
+public :
+    B(int n=0) : A(n) {}
+public:
+    int f() { return m_n + 1; }
+};
+
+int main()
+{
+    A a(1);
+    B b(3);
+    A* x[2] = { &a,&b };
+    vector<A> y({ a,b });
+    cout << x[0]->f() << x[1]->f() << y[0].f() << y[1].f() << endl;
+    return 0;
+}
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class A
+{
+public:
+    A(int n=2) : m_i(n) {}
+    ~A() { cout << m_i; }
+protected:
+    int m_i;
+};
+
+class B : public A
+{
+public:
+    B(int n) : m_a1(m_i+1),m_a2(n) {}
+public:
+    ~B()
+    {
+        cout << m_i;
+        --m_i;
+    }
+private:
+    A m_a1;
+    A m_a2;
+};
+
+int main()
+{
+    B b(5);
+    return 0;
+}
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class B
+{
+public:
+    virtual void show()
+    {
+        cout << "In Base.";
+    }
+};
+
+class D : public B
+{
+public:
+    void show()
+    {
+        cout << "In Deruved.";
+    }
+};
+
+int main()
+{
+    B* bp, b;
+    D d;
+    bp = &d;
+    bp->show();
+    bp = &b;
+    bp->show();
+    return 0;
+}
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class B
+{
+public:
+    virtual void show() = 0;
+};
+
+class D : public B
+{
+public:
+    void show() {};
+};
+
+int main()
+{
+    D d;
+    B& b = d;
+    B* bp;
+    return 0;
+}
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class B
+{
+public:
+    virtual void show() = 0;
+};
+
+void B::show()
+{
+    cout << "In Base n";
+}
+class D : public B
+{
+public:
+    void show() {
+        cout << "In Derived n";
+    }
+};
+
+int main()
+{
+    D d;
+    B& br = d;
+    br.show();
+    return 0;
+}
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class B
+{
+protected:
+    int a;
+public:
+    B() { a = 0; }
+};
+
+class D1 : virtual public B
+{
+public:
+    int c;
+    D1() { c = 0; }
+};
+
+class D2 : virtual public B
+{
+public:
+    int c;
+    D2() { c = 0; }
+};
+class DD : public D1, public D2
+{
+public:
+    void show() { cout << a; }
+};
+
+int main(void)
+{
+    DD d;
+    d.show();
+    return 0;
+}
+

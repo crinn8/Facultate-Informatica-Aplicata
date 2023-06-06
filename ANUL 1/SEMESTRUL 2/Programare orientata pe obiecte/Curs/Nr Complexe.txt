@@ -1,0 +1,239 @@
+//supraincarcare +,-,*,/ complex cu complex, real cu complex, complex cu real
+// == , !=, <, > (comparare dupa valori absolute -> re^2+im^2 -> pt real se compara cu patratul nr real
+// ~ = conjugatul, ! = re^2+im^2
+// se citeste un vector de numere complexe si un numar real R. sa se afiseze sortate crescator numerele complexe 
+//aflate la distanta mai mica decat R fata de origine. (modulul <R^2). se vor folosi numai operatori
+// citire, afisare, comparare
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+struct Complex
+{
+	double real, imaginar;
+};
+
+istream& operator>>(istream& f, Complex& numar)
+{
+	f >> numar.real >> numar.imaginar;
+	return f;
+}
+
+ostream& operator<<(ostream& f,Complex numar)
+{
+	f << numar.real << " " << numar.imaginar << "i";
+	return f;
+}
+
+
+Complex operator+(Complex numar1, Complex numar2)
+{
+	Complex rezultat;
+	rezultat.real = numar1.real + numar2.real;
+	rezultat.imaginar = numar1.imaginar + numar2.imaginar;
+	return rezultat;
+}
+
+Complex operator+(Complex numar1, double numar2)
+{
+	Complex rezultat;
+	rezultat.real = numar1.real + numar2;
+	rezultat.imaginar = numar1.imaginar;
+	return rezultat;
+}
+
+Complex operator+(double numar1, Complex numar2)
+{
+	return numar2 + numar1;
+}
+
+Complex operator-(Complex numar1, Complex numar2)
+{
+	Complex rezultat;
+	rezultat.real = numar1.real - numar2.real;
+	rezultat.imaginar = numar1.imaginar - numar2.imaginar;
+	return rezultat;
+}
+
+Complex operator-(Complex numar1, double numar2)
+{
+	Complex rezultat; 
+	rezultat.real = numar1.real - numar2;
+	rezultat.imaginar = numar1.imaginar;
+	return rezultat;
+}
+
+Complex operator-(double numar1, Complex numar2)
+{
+	Complex rezultat;
+	rezultat.real = numar1 - numar2.real;
+	rezultat.imaginar = numar2.imaginar;
+	return rezultat;
+}
+
+Complex operator-(Complex numar)
+{
+	Complex numar_negativ;
+	numar_negativ.real = -numar.real;
+	numar_negativ.imaginar = -numar.imaginar;
+	return numar_negativ;
+}
+
+Complex operator*(Complex numar1, Complex numar2)
+{
+	Complex rezultat;
+	rezultat.real = numar1.real * numar2.real - (numar1.imaginar * numar2.imaginar);
+	rezultat.imaginar = numar1.real * numar2.imaginar + numar1.imaginar * numar2.real;
+	return rezultat;
+}
+
+Complex operator*(Complex numar1, double numar2)
+{
+	Complex rezultat;
+	rezultat.real = numar1.real * numar2;
+	rezultat.imaginar = numar1.imaginar * numar2;
+	return rezultat;
+}
+
+Complex operator*(double numar1, Complex numar2)
+{
+	return numar2 * numar1;
+}
+
+Complex operator~(Complex numar)
+{
+	Complex rezultat;
+	rezultat.imaginar = -numar.imaginar;
+	rezultat.real = numar.real;
+	return rezultat;
+}
+
+double operator!(Complex numar)
+{
+	return numar.real * numar.real + numar.imaginar * numar.imaginar;
+}
+
+Complex operator/(Complex numar1, double numar2)
+{
+	Complex rezultat;
+	rezultat.real = numar1.real / numar2;
+	rezultat.imaginar = numar1.imaginar / numar2;
+	return rezultat;
+}
+
+Complex operator/(Complex numar1, Complex numar2)
+{
+	return numar1 * (~numar2) / (!numar2);
+}
+
+Complex operator/(double numar1, Complex numar2)
+{
+	return (numar1 / !numar2) * (~numar2);
+}
+
+bool operator<(Complex numar1, Complex numar2)
+{
+	return (!numar1) < (!numar2);
+}
+
+bool operator<(Complex numar1, double numar2)
+{
+	return (!numar1) < (numar2 * numar2);
+}
+
+bool operator<(double numar1, Complex numar2)
+{
+	return (!numar2) < (numar1 * numar1);
+}
+
+bool operator>(Complex numar1, Complex numar2)
+{
+	return (!numar1) > (!numar2);
+}
+
+bool operator>(Complex numar1, double numar2)
+{
+	return (!numar1) > (numar2 * numar2);
+}
+
+bool operator>(double numar1, Complex numar2)
+{
+	return (!numar2) > (numar1 * numar1);
+}
+
+bool operator<=(Complex numar1, Complex numar2)
+{
+	return (!numar1) <= (!numar2);
+}
+
+bool operator<=(Complex numar1, double numar2)
+{
+	return (!numar1) <= (numar2 * numar2);
+}
+
+bool operator<=(double numar1, Complex numar2)
+{
+	return (!numar2) <= (numar1 * numar1);
+}
+
+
+bool operator>=(Complex numar1, Complex numar2)
+{
+	return (!numar1) >= (!numar2);
+}
+
+bool operator>=(Complex numar1, double numar2)
+{
+	return (!numar1) >= (numar2 * numar2);
+}
+
+bool operator>=(double numar1, Complex numar2)
+{
+	return (!numar2) >= (numar1 * numar1);
+}
+
+void citire(vector<Complex>& numere_complexe, double& numar_real)
+{
+	int numar_elemente;
+	cout << "Introduceti numarul real ";
+	cin >> numar_real;
+	cout << "Intorduceti numarul de elemente complexe ";
+	cin >> numar_elemente;
+	for (int index = 0; index < numar_elemente; index++)
+	{
+		Complex numar;
+		cin >> numar;
+		numere_complexe.push_back(numar);
+	}
+}
+
+bool criteriu(Complex numar1, Complex numar2)
+{
+	return !numar1 < !numar2;
+}
+
+void formare_vector(vector<Complex> numere_complexe, double numar_real)
+{
+	vector<Complex> distanta;
+	for (int index = 0; index < numere_complexe.size(); index++)
+	{
+		if (!numere_complexe[index] < numar_real * numar_real)
+			distanta.push_back(numere_complexe[index]);
+	}
+	sort(distanta.begin(), distanta.end(), criteriu);
+	for (int index = 0; index < distanta.size(); index++)
+		cout << distanta[index] << endl;
+}
+
+int main()
+{
+	vector<Complex> numere_complexe;
+	double numar_real;
+	citire(numere_complexe, numar_real);
+	formare_vector(numere_complexe, numar_real);
+
+	return 0;
+
+}

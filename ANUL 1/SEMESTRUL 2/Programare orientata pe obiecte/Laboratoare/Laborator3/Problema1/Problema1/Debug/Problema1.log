@@ -1,0 +1,8 @@
+﻿  Polinom.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator3\Problema1\Problema1\Polinom.cpp(115,12): error C2678: binary '*': no operator found which takes a left-hand operand of type 'const Polinom' (or there is no acceptable conversion)
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator3\Problema1\Problema1\Polinom.cpp(82,18): message : could be 'Polinom Polinom::operator *(double)'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator3\Problema1\Problema1\Polinom.cpp(67,18): message : or       'Polinom Polinom::operator *(const Polinom &)'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator3\Problema1\Problema1\Polinom.cpp(112,9): message : or       'Polinom operator *(double,const Polinom &)'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Programare orientata pe obiecte\Laboratoare\Laborator3\Problema1\Problema1\Polinom.cpp(115,12): message : while trying to match the argument list '(const Polinom, double)'
+  Problema1.cpp
+  Generating Code...
