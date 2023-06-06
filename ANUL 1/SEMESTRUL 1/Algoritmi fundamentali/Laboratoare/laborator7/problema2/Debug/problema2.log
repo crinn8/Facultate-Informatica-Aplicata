@@ -1,0 +1,5 @@
+﻿  problema2.cpp
+C:\Users\Crina Cosmina\Desktop\ANUL 1\SEMESTRUL 1\algoritmi fundamentali\Laboratoare\laborator7\problema2\problema2.cpp(23,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina Cosmina\Desktop\ANUL 1\SEMESTRUL 1\algoritmi fundamentali\Laboratoare\laborator7\problema2\problema2.cpp(43,27): warning C4018: '>': signed/unsigned mismatch
+C:\Users\Crina Cosmina\Desktop\ANUL 1\SEMESTRUL 1\algoritmi fundamentali\Laboratoare\laborator7\problema2\problema2.cpp(46,31): warning C4018: '<': signed/unsigned mismatch
+  problema2.vcxproj -> C:\Users\Crina Cosmina\Desktop\ANUL 1\SEMESTRUL 1\algoritmi fundamentali\Laboratoare\laborator7\problema2\Debug\problema2.exe

@@ -1,0 +1,30 @@
+#include"stdio.h"
+
+long flength(FILE* fis)
+{
+	if (!fis)
+		return -1;
+	long poz = ftell(fis);
+	fseek(fis, 0L, SEEK_END);
+	long l = ftell(fis);
+	fseek(fis, poz, SEEK_SET);
+	return l;
+}
+
+void main()
+{
+	int n;
+	float x;
+
+	//scanf_s("%d%f", &n, &x);
+	
+	FILE* fis;
+	fopen_s(&fis, "d:\\numere.txt", "r");
+	if (!fis)
+		return;
+
+	fscanf_s(fis, "%d%f", &n, &x);
+	printf("%d %f", n, x);
+
+	fclose(fis);
+}

@@ -1,0 +1,34 @@
+struct Polinom
+{
+    int grad;
+    int coeficienti[90];
+};
+int ValoarePolinom(Polinom pol, int x)
+{
+    int val = pol.coeficienti[0];
+    for (int i = 1; i <= pol.grad; i++)
+    {
+        val += pow(x, i) * pol.coeficienti[i];
+    }
+    return val;
+}
+
+void SumaPolinoame(Polinom p1, Polinom p2,Polinom &rez)
+{
+    int i = 0, j = 0;
+    while (i <= p1.grad && j <= p2.grad)
+    {
+        rez.coeficienti[i] = p1.coeficienti[i] + p2.coeficienti[j];
+        i++; j++;
+    }
+    while (i <= p1.grad)
+    {
+        rez.coeficienti[i] = p1.coeficienti[i];
+        i++;
+    }
+    while (j <= p2.grad)
+    {
+        rez.coeficienti[j] = p2.coeficienti[j];
+        j++;
+    }
+}

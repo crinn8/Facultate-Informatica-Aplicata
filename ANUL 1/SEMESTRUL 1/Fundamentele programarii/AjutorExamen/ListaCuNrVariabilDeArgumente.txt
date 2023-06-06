@@ -1,0 +1,51 @@
+#include"stdarg.h"
+#include"stdio.h"
+#include"conio.h"
+
+void minmax(int* min, int* max, int n, ...)
+{
+	va_list v;
+	va_start(v, n);
+	*min = 2100000000;
+	*max = -2100000000;
+	for (int i = 0; i < n; i++)
+	{
+		int arg = va_arg(v, int);
+		if (arg < *min)
+			*min = arg;
+		if (arg > *max)
+			*max = arg;
+	}
+	va_end(v);
+}
+
+void sort(int n, ...)
+{
+	va_list v;
+	va_start(v, n);
+	float** a = (float**)malloc(n * sizeof(float*));
+	for (int i = 0; i < n; i++)
+		a[i] = va_arg(v, float*);
+	va_end(v);
+	float inter;
+	for (int i = 0; i < n - 1; i++)
+		for (int j = i + 1; j < n; j++)
+			if (*(a[i]) > *(a[j]))
+			{
+				inter = *(a[i]);
+				*(a[i]) = *(a[j]);
+				*(a[j]) = inter;
+			}
+	free(a);
+}
+
+void main()
+{
+	int min, max;
+	minmax(&min, &max, 4, 4, 5, -1, 7);
+	printf("%d %d\n", min, max);
+	float x = 1.4f, y = -1.f, z = 2.f;
+	sort(3, &x, &y, &z);
+	printf("%f %f %f\n", x, y, z);
+	_getch();
+}

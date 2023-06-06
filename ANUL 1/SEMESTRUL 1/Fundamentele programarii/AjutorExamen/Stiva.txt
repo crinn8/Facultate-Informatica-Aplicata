@@ -1,0 +1,108 @@
+#include <stdio.h>
+#include<malloc.h>
+typedef struct tstiva tstiva;
+struct tstiva
+{
+	char info;
+	tstiva* leg;
+}*cap,*primul;
+void afisare()
+{
+	printf("Stiva contine urmatoarele elemente: ");
+	tstiva* p = primul;
+	while (p != cap)
+	{
+		printf("%c", p->info);
+		p = p->leg;
+	}
+	printf("\n");
+}
+int introducere(char c)
+{
+	tstiva* p;
+	p = (tstiva*)malloc(sizeof(tstiva));
+	if (p == NULL)
+	{
+		return 0;
+	}
+	p->info = c;
+	p->leg = NULL;
+	if (primul == NULL)
+	{
+		primul = p;
+	}
+	else
+	{
+        cap = p;
+	}
+	
+	return 1;
+}
+int scoatere()
+{
+	tstiva* p=cap;
+	if (p == NULL)
+	{
+		return 0;
+	}
+
+	while (p->leg!= NULL)
+	{
+		p = p->leg;
+		cap = p;
+	}
+    
+	free(p);
+	return 1;
+}
+void main()
+{
+	int op;
+	char c;
+	op = -1;
+	do
+	{
+		printf("Introduceti: \n");
+		printf("1 pentru introducere in stiva \n");
+		printf("2 pentru scoatere din stiva \n");
+		printf("3 pentru afisarea stivei \n");
+		printf("0 pentru iesire din program \n");
+		scanf_s("%d", &op);
+		getchar();
+		switch (op)
+		{
+		case 1:
+		{
+			printf("Introduceti un caracter: ");
+			scanf_s("%c", &c);
+			if (introducere(c))
+			{
+				printf("Am introdus caracterul %c in stiva\n", c);
+			}
+			break;
+		}
+		case 2:
+		{
+			if (scoatere())
+			{
+				printf("Am scos un element din stiva\n");
+			}
+			break;
+		}
+		case 3:
+		{
+			afisare();
+			break;
+		}
+		case 0:
+		{
+			break;
+		}
+		default:
+		{
+			printf("Va rugam sa introduceti 1, 2, 3 sau 0");
+			break;
+		}
+		}
+	} while (op != 0);
+}

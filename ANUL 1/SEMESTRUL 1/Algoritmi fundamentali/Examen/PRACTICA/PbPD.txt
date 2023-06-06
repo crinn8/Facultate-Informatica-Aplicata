@@ -1,0 +1,62 @@
+ 
+#include <iostream>
+ 
+int min(int x, int y, int z)
+{
+            int min = x;
+            if (y < min) min = y;
+            if (z < min) min = z;
+            return min;
+}
+ 
+void matr(int m, int n, int matrice[100][100], int solutie[100][100], int &pozi, int &pozj, int &max)
+{
+            max = 0;
+            for (int i = 1; i < m; i++)
+                        for (int j = 1; j < n; j++)
+                                   if (matrice[i][j] == 0) solutie[i][j] = 0;
+                                   else
+                                   {
+                                               solutie[i][j] = min(solutie[i][j - 1], solutie[i - 1][j], solutie[i - 1][j - 1]) + 1;
+                                               if (solutie[i][j] > max)
+                                               {
+                                                           max = solutie[i][j];
+                                                           pozi = i;
+                                                           pozj = j;
+                                               }
+                                   }
+}
+ 
+void afisare(int pozi, int pozj, int max, int matrice[100][100])
+{
+            for (int i = pozi - max + 1; i <= pozi; i++)
+            {
+                        for (int j = pozj - max + 1; j <= pozj; j++)
+                                   std::cout << matrice[i][j] << " ";
+                        std::cout << "\n";
+            }
+}
+ 
+int main()
+{
+            int nr_linii, nr_coloane, matrice[100][100], solutie[100][100], pozi, pozj, max;
+            std::cout << "nr_linii= ";
+            std::cin >> nr_linii;
+            std::cout << "nr_coloane= ";
+            std::cin >> nr_coloane;
+            std::cout << "Matricea este : ";
+            for (int i = 0; i < nr_linii; i++)
+                        for (int j = 0; j < nr_coloane; j++)
+                                   std::cin >> matrice[i][j];
+ 
+            for (int i = 0; i < nr_linii; i++)
+                        solutie[i][0] = matrice[i][0];
+ 
+            for (int i = 0; i < nr_coloane; i++)
+                        solutie[0][i] = matrice[0][i];
+ 
+            matr(nr_linii, nr_coloane, matrice, solutie, pozi, pozj, max);
+            afisare(pozi, pozj, max, matrice);
+            system("pause");
+            return 0;
+}

@@ -1,0 +1,23 @@
+int BazaBInBaza10(int nrbazaB,int bazaB)
+{
+	int nrbaza10 = 0,i=0;
+	while (nrbazaB != 0)
+	{
+		nrbaza10 += nrbazaB % 10 * pow(bazaB, i);
+		nrbazaB /= 10;
+		i++;
+	}
+	return nrbaza10;
+}
+
+int Baza10InBazaC(int nrbaza10,int bazaC)
+{
+	int nrbazaC = 0,p=1;
+	while (nrbaza10 != 0)
+	{
+		nrbazaC = nrbazaC + nrbaza10 % bazaC*p;
+		p *= 10;
+		nrbaza10 /= bazaC;
+	}
+	return nrbazaC;
+}

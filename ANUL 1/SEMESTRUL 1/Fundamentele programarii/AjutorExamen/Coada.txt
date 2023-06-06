@@ -1,0 +1,187 @@
+#include <stdio.h>
+#include<malloc.h>
+typedef struct tcoada tcoada;
+struct tcoada
+{
+	char info;
+	tcoada* leg;
+}*primul, * ultimul;
+void afisare()
+{
+	printf("Coada contine urmatoarele elemente: ");
+	tcoada* p = primul;
+	while (p != NULL)
+	{
+		printf("%c", p->info);
+		p = p->leg;
+	}
+	printf("\n");
+}
+int introducere(char c)
+{
+	tcoada* p;
+	p = (tcoada*)malloc(sizeof(tcoada));
+	if (p == NULL)
+	{
+		return 0;
+	}
+	p->info = c;
+	p->leg = NULL;
+	if (primul == NULL)
+	{
+		primul = p;
+		ultimul = p;
+	}
+	else
+	{ 
+		ultimul->leg = p;
+		ultimul = p;
+	}
+
+	return 1;
+}
+int scoatere()
+{
+	tcoada* p;
+	if (primul == NULL)
+	{
+		return 0;
+	}
+	p = primul;
+	primul = p->leg;
+
+	free(p);
+	return 1;
+}
+void main()
+{
+	int op;
+	char c;
+	op = -1;
+	do
+	{
+		printf("Introduceti: \n");
+		printf("1 pentru introducere in coada \n");
+		printf("2 pentru scoatere din coada \n");
+		printf("3 pentru afisarea cozii \n");
+		printf("0 pentru iesire din program \n");
+		scanf_s("%d", &op);
+		getchar();
+		switch (op)
+		{
+		case 1:
+		{
+			printf("Introduceti un caracter: ");
+			scanf_s("%c", &c);
+			if (introducere(c))
+			{
+				printf("Am introdus caracterul %c in coada\n", c);
+			}
+			break;
+		}
+		case 2:
+		{
+			if (scoatere())
+			{
+				printf("Am scos un element din coada\n");
+			}
+			break;
+		}
+		case 3:
+		{
+			afisare();
+			break;
+		}
+		case 0:
+		{
+			break;
+		}
+		default:
+		{
+			printf("Va rugam sa introduceti 1, 2, 3 sau 0");
+			break;
+		}
+		}
+	} while (op != 0);
+}
+
+
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+union tpers
+{
+	char serieid[9];
+	char cnp[14];
+};
+typedef union tpers tpers;
+
+void main()
+{
+	tpers pers;
+	int op;
+
+	op = -1;
+	printf("Ce doriti sa introduceti? 1-Serie/2-CNP)");
+	scanf("%d", &op);
+	getchar();
+
+	switch (op)
+	{
+	case 1:printf("Serie:");gets(pers.serieid); printf("Am citit serie: %s ", pers.serieid);
+	case 2:printf("Cnp:");gets(pers.cnp); printf("Am citit Cnp: %s ", pers.cnp); break;
+	default: printf("Incorect");
+	}
+}
+
+
+#include <stdio.h>
+#include <stdarg.h>
+
+/*double maxim(int n, ...)
+{
+	va_list a;
+	double x;
+	double max = -1E10;
+
+	va_start(a, n);
+	for (int i = 0; i < n; i++)
+	{
+		x = va_arg(a, double);
+		if (x > max)
+		{
+			max = x;
+		}
+	}
+	va_end(a);
+
+	return max;
+}*/
+double media(int n, ...)
+{
+	va_list a;
+	double x;
+	double media = 0;
+
+
+	va_start(a, n);
+	for (int i = 0; i < n; i++)
+	{
+		x = va_arg(a, double);
+		media += x ;
+
+	}
+	va_end(a);
+
+	return media/n;
+}
+
+void main()
+{
+	printf("media nr este: %.2lf\n", media(3, 1., 2.5, 3.75));
+	printf("media nr este: %.2lf\n", media(2, 2.5, 1.));
+}
+
+
+//#include <stdio.h> #include <stdarg.h> double medie(int n, ...) { va_list lista_arg; double arg; double s = 0; //va_start (a, n) va_arg (a, double) va_end(a); va_start(lista_arg, n); for (int i = 0; i < n; i++) { arg = va_arg(lista_arg, double); s += arg; } va_end(lista_arg); return s/n; } void main() { printf("Media numerelor este: %.2lf\n", medie(3, 1., 2., 3.)); printf("Media numerelor este: %.2lf\n", medie(2, 1., 2.)); }

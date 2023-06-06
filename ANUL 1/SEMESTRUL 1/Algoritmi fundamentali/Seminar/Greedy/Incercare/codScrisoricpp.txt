@@ -1,0 +1,37 @@
+#include <iostream>
+#include <algorithm>
+
+#include "ObiectRucsac.h"
+
+bool compareObiectRucsac(ObiectRucsac obj1, ObiectRucsac obj2)
+{
+    return (obj1.eficienta() > obj2.eficienta());
+}
+
+int main()
+{
+    ObiectRucsac sir[900];
+    int dim,G;
+    std::cout << "Introduceti numarul de obiecte: ";
+    std::cin >> dim;
+    std::cout << "Introduceti greutatea maxima: ";
+    std::cin >> G;
+    std::cout << "Introduceti obiectele: "<<std::endl;
+    for (int index = 0; index < dim; index++)
+    {
+        sir[index].citire();
+    }
+    
+    std::sort(sir, sir + dim,compareObiectRucsac);
+ 
+    std::cout << "Solutia optima este: " << std::endl;
+
+    for (int index = 0; index < dim && G != 0; index++)
+    {
+        if (sir[index]._greutate <= G)
+        {
+            sir[index].afisare();
+            G -= sir[index]._greutate;
+        } 
+    }
+}

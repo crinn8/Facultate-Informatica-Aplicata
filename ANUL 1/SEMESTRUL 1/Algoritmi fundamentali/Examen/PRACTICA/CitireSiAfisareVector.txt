@@ -1,0 +1,32 @@
+void CitireVectorDinFisier(int &dim,int v[100])
+{
+    ifstream f("date.in");
+    f >> dim;
+    for (int i = 0; i < dim; i++)
+        f >> v[i];
+}
+
+
+void ScriereInFisier(int dim,int v[100])
+{
+    ofstream g("date.out");
+    for (int i = 0; i < dim; i++)
+        g << v[i] << " ";
+}
+
+
+
+
+void CitireVector(int &dim,int v[100])
+{
+    std::cin >> dim;
+    for (int i = 0; i < dim; i++)
+         std::cin>> v[i];
+}
+
+
+void AfisareVector(int dim,int v[100])
+{
+    for (int i = 0; i < dim; i++)
+        std::cout << v[i] << " ";
+}

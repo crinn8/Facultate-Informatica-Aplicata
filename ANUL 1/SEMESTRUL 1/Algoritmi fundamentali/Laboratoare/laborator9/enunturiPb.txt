@@ -1,0 +1,36 @@
+Probleme Tehnica Greedy
+(Lab IX 2020)
+ 
+1.      Un instructor de schi are la dispoziie n perechi de schiuri (n<50) pe care trebuie să le distribuie la n elevi începători. Scrieti un program care să distribuie cele n perechi de schiuri astfel încât suma diferențelor absolute dintre înălțimea elevului si lungimea schiurilor atribuite să fie minimă. 
+Ex: ski-uri: 150, 180, 140, 165, 135
+        Copii: 170, 156, 145, 160, 155
+ 
+2.      Din fisierul in.in se citesc N numere întregi (N<1000). 
+Afisați pe prima linie a fisierului out.out cel mai lung “val” care se poate construi din numerele citite. Numim “val” o secvență de numere a1, a2, ..., am astfel încât 
+a1<=a2>=a3<=a4>=a5<=... am-1>=am.
+De exemplu: 
+in.in                                 
+7
+7 5 0 1 4 9 3
+out.out
+0 9 3 7 1 5 4
+ 
+3.      Se dau N intervale [Ai, Bi] (1 ≤ i ≤ N). Calculati suma lungimilor tuturor intervalelor. Intervalele care se suprapun se vor lua in considerare o singura data. 
+               6 (nr intervale)
+-5 5 
+0 3 
+2 8 
+10 13 
+11 15 
+100 100 
+Observatii:
+Lungimea intervalului [a,b] este b-a. Prin urmare avem: 
+·        [-5,5] -> 5-(-5) = 10 
+·        [0,3] - este inclus in [-5,5], nu il numaram 
+·        [2,8] - [2,5] este inclus in [-5,5], nu il numaram, avem 8-5 = 3 
+·        [10,13] - nu e inclus nicaieri, 13-10 = 3 
+·        [11,15] - [11,13] este inclus in [10,13], avem 15-13 = 2 
+·        [100,100] - are lungimea 0 
+Adunand obtinem 10+3+3+2 = 18
+ 
+4.      Patronul unei firme a contractat n lucrări. În contractul fiecărei lucrări „i” sunt specificate termenul de predare ti şi penalizarea pi, care se plăteşte dacă lucrarea nu este finalizată la termen. Execuţia oricărei lucrări necesită o unitate de timp, iar la firma nu pot executa două lucrări în acelaşi timp. Scrieţi un program care să determine o planificare optimală a celor n lucrări contractate. O planificare este optimală dacă penalizarea totală plătită în urma executării tuturor lucrărilor este minimă.

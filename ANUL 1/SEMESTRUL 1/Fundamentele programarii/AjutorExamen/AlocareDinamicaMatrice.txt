@@ -1,0 +1,45 @@
+#include"stdio.h"
+#include"malloc.h"
+
+double** matrfloatalloc(int m, int n)
+{
+	double** a = (double**)malloc(m * sizeof(double*));
+	for (int i = 0; i < m; i++)
+		a[i] = (double*)malloc(n * sizeof(double));
+	return a;
+}
+
+void matrfloatalloc2(int m, int n, double*** a)
+{
+	*a = (double**)malloc(m * sizeof(double*));
+	for (int i = 0; i < m; i++)
+		(*a)[i] = (double*)malloc(n * sizeof(double));
+}
+
+void matrfloatfree(int m, double** a)
+{
+	for (int i = 0; i < m; i++)
+		free(a[i]);
+	free(a);
+	a = NULL;
+}
+
+void matrfloatfree2(int m, double*** a)
+{
+	for (int i = 0; i < m; i++)
+		free((*a)[i]);
+	free(*a);
+	*a = NULL;
+}
+
+void main()
+{
+	int m, n;
+	double** matr = NULL;
+	scanf_s("%d%d", &m, &n);
+	//matr = matrfloatalloc(m, n);
+	matrfloatalloc2(m, n, &matr);
+	//....
+	matrfloatfree(m, matr);
+	//matr nu este NULL !
+}

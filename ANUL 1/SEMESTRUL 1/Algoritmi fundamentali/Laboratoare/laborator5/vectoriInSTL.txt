@@ -1,0 +1,81 @@
+#include <fstream>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+
+void citire_vec(int& n, int vec[])
+{
+        ifstream f("input.txt");
+        f >> n;
+        for (int i = 0; i < n; i++)
+                f >> vec[i];
+}
+
+
+
+void afisare_vector(int n, int vec[])
+{
+        for (int i = 0; i < n; i++)
+                cout << vec[i] << " ";
+        cout << "\n";
+}
+
+
+
+void afisare_vector_STL(vector <int> vec)
+{
+        int nr_elem = vec.size();
+        for (int i = 0; i < nr_elem; i++)
+                cout << vec[i] << " ";
+        cout << "\n";
+}
+
+
+
+void afisare_vector_stl_string(vector <string> vec)
+{
+        for (int i = 0; i < vec.size(); i++)
+                cout << vec[i] << " ";
+        cout << "\n";
+}
+
+
+
+
+bool compararea_mea(int i, int j)
+{
+        return (i > j);
+}
+
+
+
+void testare_stl_sort()
+{
+        vector <int> vec = { 2, 5, 434, 24, 12, -12, 90 };
+        sort(vec.begin(), vec.end());//sort va lua in considerare pozitiile de la [begin, end)
+        vector <string> str = { "Maria", "Marian","Ana","Vlad","Toma" };
+        sort(str.begin(), str.end());
+        afisare_vector_STL(vec);
+        afisare_vector_stl_string(str);
+
+        int vector[100],n;
+        citire_vec(n, vector);
+        sort(vector, vector+n);
+        afisare_vector(n, vector);
+
+        //sortare descrescatoare
+        //sort trebuie sa aiba 3 parametrii care sunt: inceput, sfarsit (sfarsit+1) si comparatorul/regula dupa care se realizeaza ordonarea
+        //sort(vec.begin(), vec.end(), greater <int>());
+        sort(vec.begin(), vec.end(), compararea_mea);
+        afisare_vector_STL(vec);
+}
+
+
+
+
+int main()
+{
+        testare_stl_sort();
+        return 0;
+}

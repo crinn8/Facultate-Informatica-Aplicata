@@ -1,0 +1,20 @@
+void quickSort(int v[100],int st,int dr)
+{
+        int i = st, j = dr;
+        int piv = v[(st + dr) / 2];
+        while (i <= j)
+        {
+                while (v[i] < piv)
+                        i++;
+                while (v[♩] > piv)
+                        j--;
+                if (i <= j)
+                {
+                        swap(v[i], v[♩]); i++; j--;
+                }
+        }
+        if (st < j)
+                quickSort(v, st, j);
+        if (i < dr)
+                quickSort(v, i, dr);
+}

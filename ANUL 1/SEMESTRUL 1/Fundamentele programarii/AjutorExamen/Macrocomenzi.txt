@@ -1,0 +1,74 @@
+#include"stdio.h"
+
+#define suma(x,y) x+y
+#define suma2(x,y) (x+y)
+#define alipire(x,y) x##y
+#define max(x,y) x>y?x:y
+#define max2(x,y,z) \
+	if (x > y) \
+		z = x; \
+	else\
+		z = y;
+#define max3(x,y,z) ....RVCJH JHc wjhc j c
+#define inter(x,y) ........
+
+void main()
+{
+	float c;
+	c = 8.7;
+	printf("%f\n", c);
+	if (c != 8.7)
+		printf("B\n");
+
+	int u = max(4,5)*10;	// 2
+	printf("%d\n", u);
+	max2(1, 2, u);
+	printf("%d\n", u);  // if (1>2) z=1; else z=2;
+
+		int a = 1, b = 2;
+	int v = suma(a, b) * 2;		// v=a+b*2
+	printf("v=%d\n", v);			// 5
+
+	int v2 = suma2(a, b) * 2;	// v2=(a+b)*2
+	printf("v2=%d\n", v2);		// 6
+
+	int ana = 1, maria = 2, anamaria = 3;
+
+	printf("%d\n", alipire(ana, maria));	// anamaria
+	ana = alipire(a + 1, 2);			// ana=a + 12=13
+	printf("%d\n", ana);
+
+	puts("");
+
+	printf(__FILE__);
+	puts("");
+	printf(__DATE__);
+	puts("");
+	printf(__TIME__);
+	puts("");
+	printf("%d", __LINE__);
+	puts("");
+	//printf("%d", __cplusplus);
+	//printf("%d", __OBJC__);	//__ASSEMBLER__
+	//puts("");
+
+#ifdef __linux
+	ana = suma(1, 2);
+#endif
+
+#ifdef suma2
+	ana = suma2(1, 2);
+#endif
+
+#ifndef __cplusplus
+	printf("%d", ana);
+#elif defined(alipire)
+	alipire(ana, maria) = 1;
+#elif defined(suma)
+
+#else
+	std::cout << ana;
+#endif
+
+	getch();
+}

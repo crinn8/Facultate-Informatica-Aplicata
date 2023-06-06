@@ -1,0 +1,114 @@
+#include <iostream> 
+#include <queue>
+
+void IntroducereInCoada(std::queue <int> &c, int dim)
+{
+    for (int i = 0; i < dim; i++)
+    {
+        int element;
+        std::cin >> element;
+        c.push(element);
+    }
+}
+
+void AfisareCoada(std::queue <int> &c)
+{
+    while (!c.empty())
+    {
+        std::cout << " " << c.front();
+        c.pop();
+    }
+    std::cout << '\n';
+}
+
+int main()
+{
+    std::queue <int> c;
+    int dim;
+    std::cin >> dim;
+    IntroducereInCoada(c, dim);
+
+    std::cout << "Coada contine: ";
+    AfisareCoada(c);
+    return 0;
+}
+
+SAU
+
+#include <iostream>
+
+struct nod
+{
+	int info;
+	nod* before, * next;
+};
+
+void Initialization(nod*& first, nod*& last)
+{
+	first = NULL;
+	last = NULL;
+}
+void Insert(nod*& first, nod*& last, int variable)
+{
+	nod* newNod = new nod;
+	newNod->info = variable;
+	newNod->next = NULL;
+	newNod->before = NULL;
+
+	if (first == NULL)
+	{
+		first = newNod;
+		last = newNod;
+	}
+	else
+	{
+		last->next = newNod;
+		newNod->before = last;
+		last = newNod;
+	}
+}
+void Delete(nod*& first)
+{
+	nod* deleteNod = first;
+	first = first->next;
+	//first->before = NULL;
+	delete deleteNod;
+}
+void Change(nod* first, int& variable)
+{
+	variable = first->info;
+}
+void Queue(nod*& first, nod*& last)
+{
+	int numbers, variable;
+	std::cout << "Insert number of variables:";
+	std::cin >> numbers;
+	std::cout << "Insert variables:\n";
+
+	for (int index = 0; index < numbers; index++)
+	{
+		std::cin >> variable;
+		Insert(first, last, variable);
+	}
+
+	while (first != NULL)
+	{
+		Change(first, variable);
+		nod* copy = first;
+		while (copy != NULL)
+		{
+			std::cout << copy->info << " ";
+			copy = copy->next;
+		}
+		std::cout << '\n';
+		Delete(first);
+	}
+}
+int main()
+{
+	nod* prim, * ultim;
+	Initialization(prim, ultim);
+
+	Queue(prim, ultim);
+	return 0;
+}

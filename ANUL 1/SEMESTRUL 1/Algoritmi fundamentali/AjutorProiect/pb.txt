@@ -1,0 +1,25 @@
+1. You are a poor person in ChocoLand. Here, people eat chocolates daily instead of normal food.
+ There is only one shop near your home; this shop is closed on Sunday, but open on all other days of 
+the week. You may buy at most one box of N chocolates from this shop on each day when it is open.
+
+Currently, it's Monday, and you need to survive for the next S days (including the current day). You
+ have to eat K chocolates everyday (including the current day) to survive. Do note that you are 
+allowed to buy the a chocolate box and eat from it on the same day.
+
+Compute the minimum number of days on which you need to buy from the shop so that you can survive the
+ next S days, or determine that it isn't possible to survive.
+
+2.Chef has decided to move on in life and forget his last girlfriend. He has decided to get rid of
+all the love letters which he had received from his girlfriend by burning them. But he can burn the 
+letters only when he is alone at home. 
+
+Chef has a total of N love letters which he had received from his girlfriend and he is alone at home 
+for S hours. Each love letter depending on the length and paper it is made up of takes time b minutes 
+to burn. Even though Chef is sad but he’s concerned about the environment too. Therefore he want’s to 
+burn the minimum possible letters so as to last for S hours.
+
+If the love letters burn for exact S hours then print the number of love letters which are burned, 
+if the letters burn for less than S hours then print the total number of minutes for which the
+ letters burn,which happens in case Chef runs out of letters. However, if the letters burn for more 
+than S hours then print the minimum number of letters burned and the minimum time in minutes for
+ which the fire burns for after S hours.

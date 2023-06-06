@@ -1,0 +1,4 @@
+﻿  Source.c
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Fundamentele programarii\Project8\Project8\Source.c(8,6): warning C4101: 'a': unreferenced local variable
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Fundamentele programarii\Project8\Project8\Source.c(8,9): warning C4101: 'b': unreferenced local variable
+  Project8.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Fundamentele programarii\Project8\Debug\Project8.exe

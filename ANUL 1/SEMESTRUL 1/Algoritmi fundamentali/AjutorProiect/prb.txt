@@ -1,0 +1,8 @@
+Given a list of strings where no string is substring of another, find a shortest string that contains
+ each string in given list as a substring.
+
+Given a source vertex s from set of vertices V in a weighted graph where all its edge weights w(u, v) 
+are non-negative,
+ find the shortest-path weights d(s, v) from given source s for all vertices v present in the graph.
+
+https://www.codechef.com/problems/COEX01

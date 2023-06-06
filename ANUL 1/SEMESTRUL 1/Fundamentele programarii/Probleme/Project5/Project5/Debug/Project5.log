@@ -1,0 +1,6 @@
+﻿  Source.c
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Fundamentele programarii\Project5\Project5\Source.c(75,12): warning C4473: 'scanf_s' : not enough arguments passed for format string
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Fundamentele programarii\Project5\Project5\Source.c(75,12): message : placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Fundamentele programarii\Project5\Project5\Source.c(75,12): message : the missing variadic argument 2 is required by format string '%c'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Fundamentele programarii\Project5\Project5\Source.c(75,12): message : this argument is used as a buffer size
+  Project5.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Fundamentele programarii\Project5\Debug\Project5.exe

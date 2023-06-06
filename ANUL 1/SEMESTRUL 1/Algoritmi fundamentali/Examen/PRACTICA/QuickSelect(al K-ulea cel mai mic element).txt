@@ -1,0 +1,52 @@
+#include <iostream> 
+
+int partition(int v[100], int li, int ls)
+{
+    int x = v[ls], i = li;
+    for (int j = li; j <= ls - 1; j++)
+    {
+        if (v[j] <= x) 
+        {
+            std::swap(v[i], v[j]);
+            i++;
+        }
+    }
+    std::swap(v[i], v[ls]);
+    return i;
+}
+
+int kthSmallest(int v[100], int li, int ls, int k)
+{
+    int index = partition(v, li, ls);
+
+    if (index - li == k - 1)
+        return v[index];
+
+    if (index - li > k - 1)
+        return kthSmallest(v, li, index - 1, k);
+
+    return kthSmallest(v, index + 1, ls, k - index + li - 1);
+}
+
+int main()
+{
+    int v[100], n, k;
+    std::cin >> n;
+    for (int i = 0; i < n; i++)
+        std::cin >> v[i];
+    std::cin >> k;
+    
+    if (k < 0 || k > n)
+    {
+         std::cout << "Nu exita al "<<k<<"-lea element in sirul dat.";
+    }
+    else
+    {
+        int li, ls;
+        li = 0;
+        ls = n - 1;
+        std::cout << kthSmallest(v, li, ls, k);
+    }
+    
+    return 0;
+}

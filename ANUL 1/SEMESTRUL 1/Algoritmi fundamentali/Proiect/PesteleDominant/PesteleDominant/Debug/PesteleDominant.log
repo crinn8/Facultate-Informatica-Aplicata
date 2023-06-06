@@ -1,0 +1,7 @@
+﻿  PesteleDominant.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Algoritmi fundamentali\Proiect\PesteleDominant\PesteleDominant\PesteleDominant.cpp(14,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Algoritmi fundamentali\Proiect\PesteleDominant\PesteleDominant\PesteleDominant.cpp(41,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Algoritmi fundamentali\Proiect\PesteleDominant\PesteleDominant\PesteleDominant.cpp(73,43): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Algoritmi fundamentali\Proiect\PesteleDominant\PesteleDominant\PesteleDominant.cpp(91,28): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Algoritmi fundamentali\Proiect\PesteleDominant\PesteleDominant\PesteleDominant.cpp(102,28): warning C4018: '<': signed/unsigned mismatch
+  PesteleDominant.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 1\Algoritmi fundamentali\Proiect\PesteleDominant\Debug\PesteleDominant.exe

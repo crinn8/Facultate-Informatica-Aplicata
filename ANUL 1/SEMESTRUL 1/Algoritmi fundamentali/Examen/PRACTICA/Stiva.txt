@@ -1,0 +1,34 @@
+#include <iostream> 
+#include <stack>
+
+void IntroducereInStiva(std::stack <int> &s, int dim)
+{
+    for (int i = 0; i < dim; i++)
+    {
+        int element;
+        std::cin >> element;
+        s.push(element);
+    }
+}
+
+void AfisareStiva(std::stack <int> &s)
+{
+    while (!s.empty())
+    {
+        std::cout << '\n' << s.top();
+        s.pop();
+    }
+    std::cout << '\n';
+}
+
+int main()
+{
+    std::stack <int> s;
+    int dim;
+    std::cin >> dim;
+    IntroducereInStiva(s, dim);
+
+    std::cout << "Stiva contine: ";
+    AfisareStiva(s);
+    return 0;
+}

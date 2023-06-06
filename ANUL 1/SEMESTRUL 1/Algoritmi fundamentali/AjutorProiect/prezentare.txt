@@ -1,0 +1,61 @@
+(coperta)
+1 click
+
+(cuprins)
+1 click
+
+(intro)
+Metoda Greedy este o tehnică folosită în informatică, în general, în rezolvarea problemelor de optimizare, pentru a determina cel mai bun candidat dintr-o anumită categorie. 
+
+(structura algo)
+Un algoritm greedy se carcterizează prin faptul că împarte problema în subprobleme independente pentru care calculează un optim local în speranța găsirii unui optim global.
+
+(avantaje)
+Implementarea simplă și intuitivă, soluția optimă la nivel local și complexitatea polinomială reprezintă principalele avantaje ale acestei metode. Dintre algoritmii greedy cunoscuți menționăm: Dijkstra, Prim, Kruskal. 
+
+(dezavantaje)
+Pe lângă multiplele avantaje, această tehnică are și dezavantaje, neoferind siguranța obținerii unei soluții sau a optimului global. Mai mult, când vine vorba despre corectitudine, demonstrarea acesteia poate fi dificilă.
+
+(structura probleme)
+Pentru a recunoaște mai ușor o problemă a cărei rezolvare utilizează metoda greedy, identificăm o serie de trăsături specifice: se dă o mulțime de candidați A, și se cere o submulțime a sa care trebuie să îndeplinească anumite condiții interne și să fie oprimală, adică să realizele un maxim sau un minim.
+
+(probleme rezolvate)
+Pentru o mai bună înțelegere a metodei prezentate, am pregătit 2 probleme. În prima problemă, Facultatea de Biologie amplasează un acvariu și le propune studenților să  afle dacă în acesta există un piranha dominant.
+
+(explicatie)
+Un pește este numit dominant dacă acesta poate mânca toți ceilalți pești din acvariu. Deoarece acvariul este destul de îngust și lung, un pește poate mânca doar peștii adiacenți acestuia într-o mișcare, dimensiunea lui crescând. În acest caz o soluție optimă ar fi peștele de pe poziția a 3-a.  
+
+
+!VEZI IMPLEMENTAREA+
+Aceasta este implementarea problemei.
+
+Considerăm a vectorul în care reținem mărimile peștilor. Verificăm dacă mărimile tuturor peștilor sunt diferite, iar în caz contrar, nu există niciun pește dominant, deci algoritmul returnează valoarea -1. Pentru rezolvarea problemei vom căuta mărimea maximă a unui pește. După, parcurgând vectorul de mărimi din nou, căutăm un pește de mărime maximă, iar dacă acesta poate mânca măcar un pește, îl vom considera piranha dominant. Corectitudinea problemei constă în faptul că oricare pește de mărime maximă care poate mânca minim un alt pește va fi mai mare decât restul, deci acesta este soluția.
+
+În cazul favorabil, peștele se află pe prima sau pe ultima poziție, iar complexitatea este O(n). Deși în celelalte cazuri se parcurge șirul încă o dată, complexitatea este tot O(n). 
+
+A doua problmă prezintă rugămintea unui prieten de a îl ajuta să ardă scrisorile de dragoste de la fosta lui iubită. El dorește să ardă cât mai multe scrisori, fiecare dintre acestea având o anumită durată de ardere. Totuși el e condiționat de timp. Ajută-l să afle câte poate arde în timpul dat.
+
+!VEZI IMPLEMENTAREA
+treci peste
+
+Problema prezentată anterior este una de optimizare, care presupune determinarea unui număr maxim de scrisori care pot fi arse într-un 
+anumit timp. Pentru acest lucru se sortează crescător vectorul care conține pentru fiecare scrisoare timpul său de ardere, iar apoi se 
+alege candidatul cu timpul de ardere minim, în cazul în care acest timp este mai mic decât timpul rămas pentru ardeerea scrisorilor. În 
+cazul în care este un candidat bun îl adaugăm în soluție, în caz contrar înseamnă că timpul total de ardere a devenit mai mic decât timpul 
+oricărei scrisori din vector și ne oprim. Pentru a demonstra corectitudinea acestei implementări presupunem că setul de scrisori este
+ ordonat crescător după timpul de ardere necesar pentru fiecare scrisoare.
+   Alegem o soluție optimă cu un număr de m elemente și o comparăm cu soluția oferită de program.
+Dacă k > m atunci O nu este soluția optimă. 
+Dacă k = m atunci X este optimă.
+Dacă k < m, atunci putem înlocui în O prima scrisoare cu prima scrisoare din soluția noastră (scrisoarea care arde cel mai repede) fără a 
+altera restricția problemei și păstrând același număr (maxim) de scrisori selectate. Obținem soluția optimă O′ = (𝑥_1, 𝑜_2, . . . , 𝑜_(𝑚 )). 
+Proprietatea de substructură optimă. Considerăm soluția optimă O′= (𝑥_1 , . . . , 𝑜_(𝑚 )).). Presupunem că (𝑜_2, . . . , 𝑜_(𝑚 )) nu este 
+soluție optimă pentru subproblema selecției subsetul considerat. Rezultă că există O′′ = (𝑜′′_2, . . . , 𝑜′′_𝑘′′) o alta soluție 
+cu k′′  > m. Acest lucru ar conduce la o soluție (𝑥_1, 𝑜′′_2, . . . , 𝑜′′_𝑘′′) mai bună decât O′= (𝑥_1, 𝑜_2 , . . . , 𝑜_(𝑚 )).). 
+Ceea ce ne conduce la o contradicție. 
+
+Complexitatea acestei probleme este reprezentată de maximul dintre complexitățile subprogramelor care o alcătuiesc. Astfel, metodele de 
+citire și de rezlovare au complexitate polinomială ( O(n)), principală în acestea (din punctul de vedere al complexității) fiind structura
+repetitivă "for", iar metoda de afișare are complexitate liniară O(1), fiind alcătuită doar din instrucțiuni simple, fără structuri 
+repetitive.
+ 

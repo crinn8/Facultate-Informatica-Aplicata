@@ -1,0 +1,58 @@
+void merge(int v[100], int li, int ls, int m,int n)
+{
+    int i, j, k, aux[100];
+    i = li;
+    j = m + 1;
+    k = 0;
+
+    while (i <= m && j <=ls) 
+    {
+        if (v[i] < v[j]) 
+        {
+            aux[k] = v[i];
+            i++;
+            k++;
+        }
+        else
+        {
+            aux[k] = v[j];
+            j++;
+            k++;
+        }
+    }
+
+    while (i < n)
+    {
+        aux[k] = v[i];
+        i++;
+        k++;
+    }
+
+    while (j <= ls) 
+    {
+        aux[k] = v[j];
+        j++;
+        k++;
+    }
+
+    i = 0;
+    j = li;
+    while (j <= ls)
+    {
+        v[j] = aux[i];
+        i++;
+        j++;
+    }
+}
+
+//se apeleaza cu 0 si n-1
+void mergeSort(int v[100], int li, int ls) 
+{
+    if (li < ls)
+    {
+        int m = (li+ls) / 2;
+        mergeSort(v, li, m);
+        mergeSort(v, m + 1, ls);
+        merge(v, li, ls, m,ls+1);
+    }
+}

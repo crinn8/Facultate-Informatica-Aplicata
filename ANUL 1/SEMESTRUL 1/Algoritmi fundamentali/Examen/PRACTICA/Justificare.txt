@@ -1,0 +1,6 @@
+În rezolvarea problemei, metoda aleasă este Greedy deoarece este o problemă de optimizare
+
+
+
+
+Complexitatea metodei este reprezentată de maximul complexităților care o alcătuiesc, astfel avem:

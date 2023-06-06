@@ -1,0 +1,41 @@
+#include"stdio.h"
+
+void main2()
+{
+	FILE* fis;
+	fopen_s(&fis, "d:\\fisier.dat", "rb");
+	if (!fis)
+		return;
+	int i;
+	fseek(fis, 0L, SEEK_END);
+	int n = ftell(fis);
+	fseek(fis, 0L, SEEK_SET);
+	for (int k = 0; k < n - 3; k++)
+	{
+		fseek(fis, k, SEEK_SET);
+		fread(&i, 1, sizeof(int), fis);
+		if (i == 17)
+			printf_s("Gasit pe pozitia %d\n", k);
+	}
+	fclose(fis);
+}
+
+void main()
+{
+	char c = 'A';
+	short sir[4] = { 1,2,3,4 };
+	float f = 1.9f;
+	int i = 17;
+	double d = 14.3;
+	FILE* fis;
+	fopen_s(&fis, "d:\\fisier.dat", "wb");
+	if (!fis)
+		return;
+	fwrite(&c, 1, 1, fis);
+	fwrite(sir, sizeof(short), 4, fis);
+	fwrite(&f, sizeof(float), 1, fis);
+	fwrite(&i, sizeof(int), 1, fis);
+	fwrite(&d, sizeof(double), 1, fis);
+	fprintf(fis, "%d", i);
+	fclose(fis);
+}

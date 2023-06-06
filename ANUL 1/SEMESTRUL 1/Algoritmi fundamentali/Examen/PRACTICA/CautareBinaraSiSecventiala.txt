@@ -1,0 +1,22 @@
+int CautareBinara(int dim, int v[100], int element)
+{
+    int st = 0, dr = dim - 1;
+    while (st <= dr)
+    {
+        int mij = (st + dr) / 2;
+        if (v[mij] == element)
+            return mij;
+        else
+            if (v[mij] < element)
+                st = mij + 1;
+            else dr = mij - 1;
+    }
+    return -1;
+}
+
+int CautareSecv(int dim, int v[100], int element)
+{
+    for (int i = 0; i < dim; i++)
+        if (v[i] == element) return i;
+    return -1;
+}

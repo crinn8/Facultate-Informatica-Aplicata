@@ -1,0 +1,56 @@
+# include <stdio.h>
+int main()
+{
+	FILE* fis;
+	char c;
+	char fname[256];
+
+	printf("Introduceti calea catre fisier: ");
+	gets(fname);
+
+	fis = fopen(fname, "rb");
+
+	if (fis == NULL)
+	{
+		fprintf(stderr, "Eroare deschidere fisier.\n");
+		return 1; 
+	}
+	while (fread(&c, 1, 1, fis) != NULL) 
+		fprintf(stdout, "%c", c); 
+	fprintf(stdout, "%c", 12); 
+	fclose(fis);
+	return 0;
+}
+
+# include <stdio.h>
+
+void fct(void)
+{
+	static int x = 1;
+	x++;
+	printf("%d", x);
+}
+int main()
+{
+	int i;
+	for (i = 0; i < 10; i++)
+		fct();
+}
+//a. 1 1 1 1 .. 1
+//b.eroare
+//c.2 2 2.. 2 daca nu era static
+//d. 2 3 4 ..11 aceasta pt static
+//1 2 3 .. 10
+
+void main(void)
+{
+	int a, b, v;
+	v = 17;
+	if (v++ >= 18)
+		printf("da: %d", v);
+	else printf("nu: %d", v);
+	/*a = 1;
+	b = a++;
+	printf("%d%d", a, b);*/
+}
+//corect: 21

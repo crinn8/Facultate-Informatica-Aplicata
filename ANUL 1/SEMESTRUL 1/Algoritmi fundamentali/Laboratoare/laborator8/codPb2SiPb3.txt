@@ -1,0 +1,85 @@
+// Exercitiul 2
+#include <iostream>
+
+int main()
+{
+        long long int numarator, numitor;
+
+        std::cout << "numarator:";
+        std::cin >> numarator;
+
+        std::cout << "numitor:";
+        std::cin >> numitor;
+
+        if (numitor == 0 || numarator == 0)
+        {
+                std::cout << "Problema nu are pasi de rezolvare";
+                return 0;
+        }
+
+        if (numarator % numitor == 0)
+        {
+                std::cout << numarator / numitor;
+                return 0;
+        }
+
+        if (numarator == 1)
+        {
+                std::cout << numarator / numitor;
+                return 0;
+        }
+
+        if (numarator > numitor)
+        {
+                std::cout << numarator / numitor << "+";
+                numarator = numarator % numitor;
+        }
+
+        while (numarator > 0)
+        {
+                if (numitor % numarator == 0)
+                {
+                        std::cout << "1/" << numitor / numarator;
+                        return 0;
+                }
+
+                long long int nrMax = (numitor / numarator) + 1;
+                std::cout << "1/" << nrMax << "+";
+
+                numarator = numarator * nrMax - numitor;
+                numitor = numitor * nrMax;
+        }
+}
+
+// Exercitiul 3
+
+#include <iostream>
+//#include <algorithm>
+
+int main()
+{
+        int lungime, latime;
+
+        std::cout << "lungime:";
+        std::cin >> lungime;
+
+        std::cout << "latime:";
+        std::cin >> latime;
+
+        int contorTaieri = 0;
+
+        while (lungime != 0 && latime != 0)
+        {
+                if (lungime < latime)
+                {
+                        std::swap(lungime, latime);
+                }
+                int nrTaieri = lungime / latime;
+                std::cout << nrTaieri << " patrat(e) de latura " << latime << std::endl;
+
+                contorTaieri += nrTaieri;
+                lungime %= latime;
+        }
+
+        std::cout << "Taieri totale: " << contorTaieri;
+}
