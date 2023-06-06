@@ -1,0 +1,56 @@
+
+struct nod {
+	float info;
+	nod *precedent, *urmator;
+};
+
+struct lista {
+	nod *cap;
+	lista() {
+		cap = NULL;
+	}
+	void adaugare(float info) {
+		nod *x; x = new nod;
+		x->info = info;
+		x->urmator = cap;
+		if (cap == NULL)
+			cap = x;
+		else {
+			cap->precedent = x;
+			x->precedent = NULL;
+			cap = x;
+		}
+	}
+	nod * cauta(int k) {
+		nod *x;
+		x = cap;
+		while (x != NULL && x->info != k)
+			x = x->urmator;
+		return x;
+	}
+
+	void stergere(nod *x) {
+		if (x->precedent == NULL)
+			cap = x->urmator;
+		else
+			x->precedent->urmator = x->urmator;
+		if (x->urmator != NULL)
+			x->urmator->precedent = x->precedent;
+	}
+	void afisare() {
+		if (cap == NULL)
+			cout << "\nLista este goala.\n";
+		else {
+			nod *x = cap;
+			while (x != NULL)
+			{
+				cout << x->info;
+				x = x->urmator;
+				if (x != NULL)
+					cout << " <=> ";
+			}
+			cout << " -> NULL\n";
+		}
+	};
+
+};

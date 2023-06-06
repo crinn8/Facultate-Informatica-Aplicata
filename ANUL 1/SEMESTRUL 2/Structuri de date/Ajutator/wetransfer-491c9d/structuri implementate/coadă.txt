@@ -1,0 +1,43 @@
+
+struct queue {
+	struct nod {
+		coord info;
+		nod *leg;
+	};
+	nod *prim, *ultim;
+	queue() {
+		prim = NULL;
+		ultim = NULL;
+	}
+	void push(coord n) {
+		nod *x; x = new nod;
+		x->info = n;
+		x->leg = NULL;
+		if (prim == NULL) {
+			prim = x; ultim = x;
+		}
+		else {
+			ultim->leg = x;
+			ultim = x;
+		}
+	};
+	void pop() {
+		if (prim != NULL) {
+			nod *y; y = new nod;
+			y = prim;
+			prim = prim->leg;
+			delete y;
+		}
+	};
+	bool empty() {
+		if (prim == NULL)
+			return 1;
+		else
+			return 0;
+
+	}
+	coord front() {
+		if (prim != NULL)
+			return prim->info;
+	}
+};

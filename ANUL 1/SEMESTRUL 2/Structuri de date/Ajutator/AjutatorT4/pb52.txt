@@ -1,0 +1,235 @@
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <string>
+#include <queue>
+
+struct NOD {
+	int frecv=0;
+	char c='-';
+	NOD* st=nullptr, * dr = nullptr, * parinte = nullptr;
+};
+
+class Priority_Queue
+{
+public:
+	std::vector <NOD*> DATA;
+	int SIZE;
+	Priority_Queue()
+	{
+		SIZE = 0;
+	}
+
+	void INSERT(NOD* val)
+	{
+		DATA.push_back(val);
+		SIZE++;
+		INCREASE_KEY(SIZE - 1, val);
+	}
+
+	void EXTRACT_MIN()
+	{
+		if (SIZE != 0)
+		{
+			DATA[0] = DATA[SIZE - 1];
+			SIZE--;
+			MIN_HEAPFY(0);
+		}
+	}
+
+	NOD* MIN_ELEMENT()
+	{
+		if (SIZE != 0)
+		{
+			return DATA[0];
+		}
+	}
+
+	void INCREASE_KEY(int poz, NOD* val)
+	{
+		if (poz < SIZE)
+		{
+			DATA[poz] = val;
+			int p = (poz - 1) / 2;
+			while (poz > 0 && DATA[p]->frecv > val->frecv)
+			{
+				DATA[poz] = DATA[p];
+				poz = p;
+				p = (poz - 1) / 2;
+			}
+			DATA[poz] = val;
+		}
+	}
+
+	void MIN_HEAPFY(int poz)
+	{
+		int st, dr, poz_min;
+		st = 2 * poz + 1;
+		dr = 2 * poz + 2;
+		poz_min = poz;
+		if (st<SIZE && DATA[st]->frecv<DATA[poz_min]->frecv)
+		{
+			poz_min = st;
+		}
+		if (dr<SIZE && DATA[dr]->frecv<DATA[poz_min]->frecv)
+		{
+			poz_min = dr;
+		}
+		if (poz_min != poz)
+		{
+			std::swap(DATA[poz], DATA[poz_min]);
+			MIN_HEAPFY(poz_min);
+		}
+	}
+};
+
+struct ArboreHuffmann{
+	NOD* radacina;
+
+	void ConstruireArboreHuffmann(Priority_Queue Q)
+	{
+		while (Q.SIZE> 1)
+		{
+			NOD* X, * Y,*NOU;
+			X = new NOD;
+			Y = new NOD;
+			X = Q.MIN_ELEMENT();
+			Q.EXTRACT_MIN();
+			Y = Q.MIN_ELEMENT();
+			Q.EXTRACT_MIN();
+			NOU = new NOD;
+			NOU->frecv = X->frecv + Y->frecv;
+			NOU->st = X;
+			NOU->dr = Y;
+			X->parinte = NOU;
+			Y->parinte = NOU;
+			Q.INSERT(NOU);
+		}
+		radacina = Q.MIN_ELEMENT();
+	}
+};
+
+
+void CitireText(NOD fr[30])
+{
+	std::string text;
+	std::ifstream f("text.in");
+	std::getline(f, text);
+	int i = 0;
+	while (i<text.size())
+	{
+		char x;
+		x = text[i];
+		if (x >= 'a' && x <= 'z')
+		{
+			int poz = int(x - 'a') + 1;
+			fr[poz].frecv++;
+			if (fr[poz].c == '-')
+			{
+				fr[poz].c = x;
+			}
+		}
+		else
+			if (x == ' ')
+			{
+				fr[0].frecv++;
+			}
+		i++;
+	}
+	std::cout << std::endl;
+}
+
+void ConstruireCoada(Priority_Queue &Q,NOD fr[30])
+{
+	for (int i = 0; i < 30; i++)
+	{
+		if (fr[i].c != '-'&&fr[i].frecv!=0)
+		{
+			NOD* x = new NOD;
+			x->c = fr[i].c;
+			x->frecv = fr[i].frecv;
+			Q.INSERT(x);
+		}
+	}
+}
+
+
+void AfisareCoduri(NOD *radacina,std::vector<int> cod)
+{
+	if (radacina->st!=nullptr) 
+	{
+		cod.push_back(0);
+		AfisareCoduri(radacina->st,cod);
+	}
+
+	if (radacina->dr != nullptr) {
+		cod.push_back(1);
+		AfisareCoduri(radacina->dr, cod);
+	}
+
+	if (radacina->dr==nullptr&&radacina->st==nullptr)
+	{
+		std::cout << radacina->c << " " << radacina->frecv << " ";
+		for (int i = 0; i < cod.size(); i++)
+		{
+			std::cout << cod[i];
+		}
+		for (int i = 0; i < cod.size(); i++)
+		{
+			cod.pop_back();
+		}
+		std::cout << std::endl;
+	}
+}
+
+
+int main()
+{
+	Priority_Queue Q;
+
+	NOD fr[30];
+	for (int i = 0; i < 30; i++)
+	{
+		fr[i].frecv = 0;
+		fr[i].c = '-';
+	}
+	fr[0].c = '!';
+	CitireText(fr);
+	ConstruireCoada(Q, fr);
+	for (int i = 0; i < Q.DATA.size(); i++)
+	{
+		std::cout << Q.DATA[i]->c << " " << Q.DATA[i]->frecv << std::endl;
+	}
+
+	std::cout << std::endl;
+	std::vector<int> cod;
+
+	ArboreHuffmann coduri;
+	coduri.ConstruireArboreHuffmann(Q);
+	//AfisareCoduri(coduri.radacina,cod);
+
+	return 0;
+}
+
+
+/*class myComparator
+{
+public:
+	bool operator() (NOD* n1, NOD* n2)
+	{
+		return n1->frecv > n2->frecv;
+	}
+};*/
+
+
+
+		/*while (poz>0 && val->frecv < DATA[(poz - 1) / 2]->frecv)
+		{
+			DATA[poz] = DATA[(poz - 1) / 2];
+			poz = (poz- 1) / 2;
+		}
+		DATA[poz] = val;*/
+
+
+
+

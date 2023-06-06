@@ -1,0 +1,48 @@
+
+			
+			/*if (c == '(')
+			{
+				operatori.push(c);
+			}
+			else
+				if (c == ')')
+				{
+					while (operatori.empty() == false && operatori.top() != '(')
+					{
+						std::vector<char>element;
+						element.push_back(operatori.top());
+						operatori.pop();
+						v.push_back(element);
+					}
+					if (operatori.empty() == false && operatori.top() == '(')
+						operatori.pop();
+				}
+				else*/
+
+
+
+				int p = Prioritate(c);
+				while (operatori.empty() == false)
+				{
+					char aux = operatori.top();
+					if (p <= Prioritate(aux) && operatori.empty() == false)
+					{
+						std::vector<char>element;
+						element.push_back(operatori.top());
+						v.push_back(element);
+						operatori.pop();
+					}
+					else break;
+				}
+				operatori.push(c);
+
+
+		/*while (operatori.empty() == false)
+		{
+			std::vector<char>element;
+			element.push_back(operatori.top());
+			operatori.pop();
+			v.push_back(element);
+		}*/
+
+

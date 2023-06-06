@@ -1,0 +1,20 @@
+﻿  Problema3.cpp
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(28,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(52,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(55,12): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(69,9): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(83,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(90,97): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(104,35): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(114,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(120,13): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(149,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(230,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(236,8): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(241,13): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(255,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(300,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(304,23): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(20): warning C4715: 'Prioritate': not all control paths return a value
+C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Problema3\Problema3.cpp(224): warning C4715: 'Calcule': not all control paths return a value
+  Problema3.vcxproj -> C:\Users\Crina\Desktop\ANUL 1\SEMESTRUL 2\Structuri de date\Teme\Tema2\Problema3\Debug\Problema3.exe

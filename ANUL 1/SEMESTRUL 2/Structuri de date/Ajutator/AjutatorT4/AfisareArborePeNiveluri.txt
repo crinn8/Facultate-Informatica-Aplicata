@@ -1,0 +1,31 @@
+
+
+	void AfisareArbore()
+	{
+		std::queue<NOD*>c;
+		c.push(radacina);
+		NOD* index;
+		int i = 0, max = 1;
+		while (c.empty() == false)
+		{
+			index = c.front();
+			i++;
+			if (index->frecv > 0)
+				std::cout << index->c << " " << index->frecv << "|";
+			c.pop();
+			if (index->st != NULL)
+			{
+				c.push(index->st);
+			}
+			if (index->dr != NULL)
+			{
+				c.push(index->dr);
+			}
+			if (i == max)
+			{
+				std::cout << std::endl;
+				max = c.size();
+				i = 0;
+			}
+		}
+	}

@@ -1,0 +1,46 @@
+void Lant(int x, int y)
+    {
+        std::queue<int>lant;
+        std::vector<int>v(nr_noduri, -1);
+        lant.push(x);
+        v[x] = -2;
+        int ok = 0, poz;
+        while (lant.empty() == false && ok == 0)
+        {
+            poz = lant.front();
+            lant.pop();
+            for (int i = 0; i < liste.size(); i++)
+            {
+                for (int j = 0; j < liste[i].size(); j++)
+                {
+                    if (liste[i][j] == poz)
+                    {
+                        lant.push(i);
+                        v[i] = liste[i][j];
+                    }
+                }
+            }
+            for (int i = 0; i < liste[poz].size(); i++)
+            {
+                if (v[liste[poz][i]] == -1)
+                {
+                    lant.push(liste[poz][i]);
+                    v[liste[poz][i]] = poz;
+                }
+                if (liste[poz][i] == y)
+                {
+                    ok = 1;
+                }
+            }
+           
+
+        }
+        if (ok == 1)
+        {
+            AfisareDrum(v, x, y);
+        }
+        else
+        {
+            std::cout << "Nu exista lant de la " << x << " la " << y << ".";
+        }
+    }

@@ -1,0 +1,80 @@
+https://www.programiz.com/dsa/huffman-coding
+
+
+/*class Priority_Queue
+{
+public:
+	std::vector <NOD> DATA;
+	int SIZE;
+	Priority_Queue()
+	{
+		SIZE = 0;
+	}
+
+	void INSERT(NOD val)
+	{
+		DATA.push_back(val);
+		SIZE++;
+		INCREASE_KEY(SIZE - 2, val);
+	}
+
+	void EXTRACT_MIN()
+	{
+		if (SIZE != 0)
+		{
+			DATA[0] = DATA[SIZE - 1];
+			SIZE--;
+		    MIN_HEAPFY(0);
+		}
+	}
+
+	int MIN_ELEMENT()
+	{
+		if (SIZE != 0)
+		{
+			return DATA[0].frecv;
+		}
+	}
+
+	void INCREASE_KEY(int poz, NOD val)
+	{
+		if (poz <= SIZE )
+		{
+			std::cout << "da";
+			if (poz >= 0 && val.frecv > DATA[poz].frecv)
+			{
+				DATA[poz] = val;
+				int p = (poz - 1) / 2;
+				while (poz >= 0 && DATA[p].frecv < val.frecv)
+				{
+					DATA[poz] = DATA[p];
+					poz = p;
+					p = (poz - 1) / 2;
+				}
+				DATA[poz] = val;
+			}
+		}
+	}
+
+	void MIN_HEAPFY(int poz)
+	{
+		int st, dr, poz_max;
+		st = 2 * poz + 1;
+		dr = 2 * poz + 2;
+		poz_max = poz;
+		if (st<SIZE && DATA[st].frecv>DATA[poz_max].frecv)
+		{
+			poz_max = st;
+		}
+		if (dr<SIZE && DATA[dr].frecv>DATA[poz_max].frecv)
+		{
+			poz_max = dr;
+		}
+		if (poz_max != poz)
+		{
+			std::swap(DATA[poz], DATA[poz_max]);
+			MIN_HEAPFY(poz_max);
+		}
+	}
+};
+*/
